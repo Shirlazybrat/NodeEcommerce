@@ -13,6 +13,7 @@ ecommerceApp.controller('mainController', function($scope, $http, $location, $co
 	 		console.log(response);
 	 		if(response.data.message == 'added'){
 	 			$location.path('/options');
+	 			$scope.message = "Welcome" + $scope.username;
 	 		}
 	 	}, function errorCallback(response){
 	 		console.log(response);
