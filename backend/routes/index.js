@@ -3,7 +3,8 @@ var router = express.Router();
 var mongoose = require('mongoose');
 var mongoUrl = "mongodb://127.0.0.1:27017/ecommerce";
 mongoose.connect(mongoUrl);
-var Accounts = require('../models/accounts');
+var Account = require('../models/accounts');
+var randToken = require('rand-token');
 
 //include bcrypt
 var bcrypt = require('bcrypt-nodejs');
@@ -16,24 +17,36 @@ router.post('/register', function(req,res,next){
 		});
 	}
 	else {
-		var newAccount = new User({
+		var token = randToken.generate(32);
+		var newAccount = new Account({
 			username: req.body.username,
-			password: bcrypt.hash(req.body.password),
-			email: req.body.email
+			password: bcrypt.hashSync(req.body.password),
+			email: req.body.email,
+			token: token
 });
-	
 
-	newAccount.save();
-	res.json({
-		message: "added",
-		username: req.body.username
+
+	newAccount.save(function(error, documentAdded){
+		if(error){
+			res.json({
+				message: "errorAdding"
+			});
+		}
+		else{
+			res.json({
+			message: "added",
+			token: token
+			//add tokenExpDate
+			});
+		}
 	});
+	
 }
 
 });
 
 router.post('/login', function(req,res,next){
-	User.findOne(
+	Account.findOne(
 		{username: req.body.username}, //This is the droid w a`re looking for
 		function(error, document){
 			//document is returned from the mongo query
@@ -48,7 +61,7 @@ router.post('/login', function(req,res,next){
 				//it will return true if equal, false if not
 				var loginResult = bcrypt.compareSync(req.body.password, document.password);
 				if(loginResult){
-					//the password is correct. login alowed
+					//the password is correct. login allowed
 					res.json({
 						success: "userFound"
 					});
@@ -64,5 +77,32 @@ router.post('/login', function(req,res,next){
 	)
 });
 
+
+router.get('/getUserData', function(req,res,next){
+	var userToken = req.query.token; // the XXX in ?token=[XXX]
+	if(userToken == undefined){
+		//no token was supplied
+		res.json({failure: "noToken"});
+	}
+	else {
+		Account.findOne(
+			{token: userToken}, //this is the droid we're looking for
+			function(error, document){
+				if(document == null){
+					//this token is not in the system
+					res.json({failure: 'badToken'}); //
+				}
+				else{
+					res.json({
+						username: document.username,
+						grind: document.grind,
+						frequency: document.frequency,
+						token: document.token
+					});
+				}
+			}
+		)
+	}
+});
 
 module.exports = router;

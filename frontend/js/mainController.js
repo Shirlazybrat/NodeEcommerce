@@ -2,6 +2,7 @@ var ecommerceApp = angular.module('ecommerceApp', ['ngRoute', 'ngCookies']);
 ecommerceApp.controller('mainController', function($scope, $http, $location, $cookies){
 	 var apiPath = "http://127.0.0.1:3000";
 
+
 	 $scope.register = function(){
 	 	console.log($scope.username);
 	 	$http.post(apiPath + '/register', {
@@ -13,7 +14,8 @@ ecommerceApp.controller('mainController', function($scope, $http, $location, $co
 	 		console.log(response);
 	 		if(response.data.message == 'added'){
 	 			$location.path('/options');
-	 			$scope.message = "Welcome" + $scope.username;
+	 			$cookies.put('token', response.data.token);
+	 			$cookies.put('username', $scope.username);
 	 		}
 	 	}, function errorCallback(response){
 	 		console.log(response);
@@ -25,17 +27,38 @@ $scope.login = function(){
 	 	console.log($scope.username);
 	 	$http.post(apiPath + '/login', {
 	 		username: $scope.username,
-	 		password: $scope.password,
+	 		password: $scope.password
 	 	}).then(function successCallback(response){
 	 		console.log(response);
-	 		if(response.data.message == 'added'){
+	 		if(response.data.success == 'userFound'){
 	 			$location.path('/options');
-	 			$scope.message = "Welcome" + $scope.username;
+	 			$cookies.put('username', $scope.username);
+	 			$scope.username = $cookies.get.username;
 	 		}
 	 	}, function errorCallback(response){
 	 		console.log(response);
 	 	});
 	 };
+
+
+
+	 $http.get(apiPath + '/getUserData?token=' + $cookies.get('token'))
+	 .then(function successCallback(response){
+	 	////response.data.xxxx = whatever res.json was in express
+	 	if(response.data.failure == 'badToken'){
+	 		$location.path = '/login';
+	 	}
+	 	else if (response.data.failure){
+	 		$location.path = '/login' //No token
+	 	}
+	 	else {
+	 		// the token is good, response.data will have the info
+
+	 	}
+	 }, function errorCallback(response){
+
+	 });
+
 	});
 
 //Set up routes using the routes module

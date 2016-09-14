@@ -12,39 +12,36 @@
     <title>Sheena's Pickles</title>
  
 <!-- http://www.alishamooredesign.com/Sheena-s-Pickles -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<!-- Bootstrap Core CSS -->
-<link href="css/bootstrap.min.css" rel="stylesheet">
-
-<!--Slick CSS CDN -->
-<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+<!-- Angular -->
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-
-<!-- Slick JS -->
-<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
-
 <script src="js/angular-route.min.js"></script>
 <script src="js/angular-cookies.min.js"></script>
 
 <script tpye="text/javascript"  src="js/mainController.js"></script>
 
+<!-- Bootstrap Core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+<!-- fonts -->
+<link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two|Unkempt|Henny+Penny' rel='stylesheet' type='text/css'>  
+<link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two|Unkempt|Henny+Penny' rel='stylesheet' type='text/css'>
+
+<!--Slick CSS -->
+<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
 
 <!-- Scroll CSS -->
 <link href="css/scrolling-nav.css" rel="stylesheet">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
 
 <link rel="stylesheet" href="css/styles.css" type="text/css" media="screen">
-    
-<link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two|Unkempt|Henny+Penny' rel='stylesheet' type='text/css'>
-    
-<link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two|Unkempt|Henny+Penny' rel='stylesheet' type='text/css'>
 
 </head>
 
@@ -102,15 +99,15 @@
         <li><p class="navbar-text">Already have an account?</p></li>
         <li>
           <a href="#/login" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
-          </li>
+          </li> 
           <li>
           <a type="button" class="btn btn-sm">
-  <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Shop
-</a>
+          <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Shop
+          </a>
           </li>
-          <li>
-            <a>{{message}}</a>
-          </li>
+          <li ng-hide="loggedIn">
+            <a href="/logout">Log Out</a>
+          </li>  
         </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -140,7 +137,7 @@
     <!-- <script src="js/jquery.js"></script> -->
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <!-- <script src="js/bootstrap.min.js"></script> -->
 
     <!-- Scrolling Nav JavaScript -->
     <script src="js/jquery.easing.min.js"></script>

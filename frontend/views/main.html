@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-
-
-<body>
 
 <section id="delights" class="delights-section site-wrapper">
       <div class="row col-md-12">
@@ -15,8 +7,18 @@
             <h2>A Homemade Delight</h2>
     <p class="about">Sheena's Pickels are a hand crafted blend of herbs and spices coupled together with natural and organic pickeling ingredients to bring you a flavorful experience sure to sate every palate. 
     <br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis explicabo animi itaque adipisci alias maiores necessitatibus repellat corporis perferendis, cupiditate, qui aperiam illum modi ab?</p>
-            <p><a href="#.html" class="btn btn-lg btn-default" data-toggle="button" aria-pressed="false" autocomplete="off">Enter</a>
-            </p>
+    <div class="sliders">
+    	<div><img src="../img/bananapep.jpg"></div>
+    	<div><img src="../img/brandLabel.jpg"></div>
+    	<div><img src="../img/jarinhand.jpg"></div>
+    	<div><img src="../img/party.jpg"></div>
+    	<div><img src="../img/pickles1.jpg"></div>
+    	<div><img src="../img/sheena_mockup_670.jpg"></div>
+    	<div><img src="../img/slice.jpg"></div>
+    	<div><img src="../img/tasty.jpg"></div>
+    	<div><img src="../img/vegSpread.jpg"></div>
+    	<div><img src="../img/wedding.jpg"></div>
+    </div>
           </div>
           </div>
           </div>
@@ -34,11 +36,11 @@
     <img class="profile" src="#">
     <h3>Learn more</h3>
     <!-- links to online articles -->
-    <p><a href="#">Pickle School with the Austin Learnshop</a></p>
+    <p><img src="#">Pickle School with the Austin Learnshop<a href="#"></a></p>
 
     </div>
             <p>
-              <a href="home.html" class="btn btn-lg btn-default" data-toggle="button" aria-pressed="false" autocomplete="off">Enter</a>
+              <img src="home.html" class="btn btn-lg btn-default" data-toggle="button" aria-pressed="false" autocomplete="off"><a href="#">Enter</a>
             </p>
           </div>
         </div>
@@ -54,7 +56,7 @@
           <div class="inner cover">
             <h2>Upcoming Events</h2>
             <p class="lead">
-              <a href="home.html" class="btn btn-lg btn-default" data-toggle="button" aria-pressed="false" autocomplete="off">Enter</a>
+              <img src="home.html" class="btn btn-lg btn-default" data-toggle="button" aria-pressed="false" autocomplete="off"><a href="#">Enter</a>
             </p>
           </div>
         </div>
@@ -74,7 +76,7 @@
         <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
       </blockquote>
             <p>
-              <a href="home.html" class="btn btn-lg btn-default" data-toggle="button" aria-pressed="false" autocomplete="off">Enter</a>
+              <img src="home.html" class="btn btn-lg btn-default" data-toggle="button" aria-pressed="false" autocomplete="off">Enter</a>
             </p>
           </div>
         </div>
@@ -82,6 +84,17 @@
       </div>
     </section>
  
+ <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="slick/slick.min.js"></script>
 
-</body>
-</html>
+ <script type="text/javascript">
+  $(document).ready(function(){
+      $('.sliders').slick({
+    	slidesToShow: 1,
+		  slidesToScroll: 1,
+		  autoplay: true,
+		  autoplaySpeed: 2000,
+  });
+});
+ </script>
