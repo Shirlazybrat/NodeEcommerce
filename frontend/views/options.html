@@ -1,8 +1,8 @@
 <div class="container">
 <div class="text-center"><h2>Options</h2></div>
   <div class="row">
-    <div class="col-md-6">
-      <div class="panel panel-default">
+    <div class="col-md-12">
+      <div class="panel panel-success">
        <div class="panel-heading">Pickled</div>
        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate. 
         Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis 
@@ -10,16 +10,110 @@
         Aliquam in felis sit amet augue.
         <h5>All pickles are homemade, vinegar based and take 4 weeks before they are ready for consumption.</h5>
 
-        <div class="form-group">
-  <label class="col-md-3 control-label" for="selectbasic">Homemade Pickles</label>
-  <div class="col-md-9">
-    <select id="selectbasic" name="selectbasic" class="form-control">
-      <option value="1">Texas Heat (spicy)</option>
-      <option value="2">The Dilly (Dill)</option>
-      <option value="3">The B&B (Bread and Butter)</option>
-    </select>
+<div ng-submit="items" class="cartItems panel-body">
+
+<div>
+  <div class="col-sm-6 col-md-3">
+    <div class="thumbnail">
+      <img src="../img/harvestJar.jpg" alt="#">
+      <div class="caption">
+        <h4>Texas Heat (spicy)</h4>
+        <p>The spiciest pickles for the bravest palate</p>
+        <p><a href="#">More</a> about this item.</p>
+        <h3 class="price">$5.00</h3>
+        <p><select ng-model="heatQuan" id="quantity" name="quantity" class="form-control">
+          <option value="1">only 1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+        </select>
+     <a ng-click="addToCart('Texas Heat (Spicy)', heatQuan)" class="btn btn-success btn-sm" role="button" type="submit" id="heat" >Add To Cart</a></p>
+      </div>
+    </div>
   </div>
 </div>
+
+<div>
+  <div class="col-sm-6 col-md-3">
+    <div class="thumbnail">
+      <img src="../img/harvestJar.jpg" alt="#">
+      <div class="caption">
+        <h4>The Dilly (Dill)</h4>
+        <p>Traditional Dill Pickles</p>
+        <p><a href="#">More</a> about this item.</p>
+        <h3 class="price">$5.00</h3>
+        <p><select id="quantity" name="quantity" class="form-control">
+          <option value="1">only 1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="3">4</option>
+          <option value="3">5</option>
+          <option value="3">6</option>
+          <option value="3">7</option>
+          <option value="3">8</option>
+        </select>
+     <a ng-click="addToCart()" class="btn btn-success btn-sm" role="button" type="submit" id="dill">Add To Cart</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div>
+  <div class="col-sm-6 col-md-3">
+    <div class="thumbnail">
+      <img src="../img/harvestJar.jpg" alt="#">
+      <div class="caption">
+        <h4>The B&B (Bread and Butter)</h4>
+        <p>Your favorite Bread 'n Butter delights.</p>
+        <p><a href="#">More</a> about this item.</p>
+        <h3 class="price">$5.00</h3>
+        <p><select id="quantity" name="quantity" class="form-control">
+          <option value="1">only 1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="3">4</option>
+          <option value="3">5</option>
+          <option value="3">6</option>
+          <option value="3">7</option>
+          <option value="3">8</option>
+        </select>
+     <a ng-click="addToCart()" class="btn btn-success btn-sm" role="button" type="submit" id="BB">Add To Cart</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div>
+  <div class="col-sm-6 col-md-3">
+    <div class="thumbnail">
+      <img src="../img/harvestJar.jpg" alt="#">
+      <div class="caption">
+        <h4>Texas Heat (spicy)</h4>
+        <p>The spiciest pickles for the bravest palate</p>
+        <p><a href="#">More</a> about this item.</p>
+        <h3 class="price">$5.00</h3>
+        <p><select id="quantity" name="quantity" class="form-control">
+          <option value="1">only 1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="3">4</option>
+          <option value="3">5</option>
+          <option value="3">6</option>
+          <option value="3">7</option>
+          <option value="3">8</option>
+        </select>
+     <a ng-click="addToCart()" class="btn btn-success btn-sm" role="button" type="submit" id="pepper">Add To Cart</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</div>  <!-- end all options -->
 
         </div>
         
@@ -27,8 +121,8 @@
       </div>
       <!-- /////////////////////////// -->
       
-      <div class="col-md-6">
-      <div class="panel panel-default">
+      <div class="col-md-12">
+      <div class="panel panel-success">
        <div class="panel-heading">Jammed</div>
        <div class="panel-body">Many of you have been asking about the difference between a jam and a fruit butter. Jams require that you cook the fruit at a higher temp with a lot of sugar. Fruit bitters are cooked slowly (usually in a crockpot for about 10 hours) to bring out the natural sugars of the fruit. Very little sugar is added.
 
@@ -63,7 +157,7 @@
 
 
     <div class="col-md-12">
-      <div class="panel panel-default">
+      <div class="panel panel-success">
        <div class="panel-heading">Delivery Notice</div>
        <div class="panel-body">
        <p>Since I travel for work (you know the other job that pays the bill), I would prefer if you give me advance notice if you want pickles.</p>
@@ -75,42 +169,41 @@
       </div>
       <!-- //////////////////////////////////// -->
       
-      <div class="panel panel-default">
+      <div class="panel panel-success">
        <div class="row clearfix">
     
     <div class="col-xs-12 col-sm-12 col-md-8 col-lg-6  column col-sm-offset-0 col-md-offset-2 col-lg-offset-3">
 
-<form class="form-horizontal">
+<form ng-submit="checkout()" class="form-horizontal">
 <fieldset>
 
 <!-- Form Name -->
-<legend>Personal Information</legend>
+<legend>Delivery Information</legend>
 
 <!-- Text input-->
 <div class="form-group">
   <label class="col-md-3 control-label" for="textinput">Name</label>  
   <div class="col-md-9">
-    <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="form-control input-md">
+    <input id="name" id="textinput" name="textinput" type="text" placeholder="Enter your name" class="form-control input-md">
   </div>
 </div>
 
 <!-- Select Basic -->
 <div class="form-group">
-  <label class="col-md-3 control-label" for="selectbasic">Select Basic</label>
+  <label class="col-md-3 control-label" for="selectbasic">Location Type</label>
   <div class="col-md-9">
-    <select id="selectbasic" name="selectbasic" class="form-control">
-      <option value="1">Option one</option>
-      <option value="2">Option two</option>
-      <option value="3">Option three</option>
+    <select id="home" id="selectbasic" name="selectbasic" class="form-control">
+      <option value="1">House</option>
+      <option value="2">Apartment</option>
+      <option value="3">Business</option>
     </select>
   </div>
 </div>
 
-
 <!-- Multiple Radios (inline) -->
 <div class="form-group">
-  <label class="col-md-3 control-label" for="radios">#</label>
-  <div class="col-md-6"> 
+  <label class="col-md-3 control-label" for="radios">Options</label>
+  <div id="deliver" class="col-md-6"> 
     <label class="radio-inline" for="radios-0">
       <input type="radio" name="radios" id="radios-0" value="1" checked="checked">
       Delivery
@@ -121,17 +214,32 @@
     </label> 
   </div>
 </div>
+
 <div class="form-group">
   <label class="col-md-3 control-label" for="textinput">Address</label>  
   <div class="col-md-9">
-    <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="form-control input-md">
+    <input id="address" id="textinput" name="textinput" type="text" placeholder="Enter your address" class="form-control input-md">
+  </div>
+  </div>
+
+  <div class="form-group">
+  <label class="col-md-3 control-label" for="textinput">City</label>  
+  <div class="col-md-9">
+    <input id="city" id="textinput" name="textinput" type="text" placeholder="Enter city" class="form-control input-md">
+  </div>
+  </div>
+
+  <div class="form-group">
+  <label class="col-md-3 control-label" for="textinput">Zipcode</label>  
+  <div class="col-md-9">
+    <input id="zip" id="textinput" name="textinput" type="text" placeholder="Enter zipcode" class="form-control input-md">
   </div>
   </div>
 
   <div class="form-group">
   <label class="col-md-3 control-label" for="textinput">Phone Number</label>  
   <div class="col-md-9">
-    <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="form-control input-md">
+    <input id="phone" id="numinput" name="phoneNumber" type="phonenumber" placeholder="555-555-5555" class="form-control input-md">
   </div>
  </div>
   
@@ -139,7 +247,7 @@
 <div class="form-group">
   <label class="col-md-3 control-label" for="textarea">Specific Details</label>
   <div class="col-md-9">                     
-    <textarea class="form-control" id="textarea" name="textarea">default text</textarea>
+    <textarea id="details" class="form-control" id="textarea" placeholder="added details here" name="textarea"></textarea>
   </div>
 </div>
 
@@ -147,8 +255,8 @@
 <div class="form-group">
   <label class="col-md-3 control-label" for="button1id"></label>
   <div class="col-md-8">
-    <button id="button1id" name="button1id" class="btn btn-success">Submit</button>
-    <button id="button2id" name="button2id" class="btn btn-danger">Cancel</button>
+    <a id="button1id" name="button1id" class="btn btn-success">Submit</a>
+    <button id="button2id" name="button2id" class="btn btn-default"><a href="#/main">Cancel</a></button>
   </div>
 </div>
 

@@ -1,34 +1,43 @@
-/* Coolors Exported Palette - coolors.co/65922b-74ba2a-d27b82-f9ebc9-385d3e */
-/* HSL */
-/* RGB */
-/* line 17, ../compass/sass/styles.scss */
+/* https://coolors.co/65922b-74ba2a-d27b82-f9ebc9-385d3e
+
+$color1: #0d5325; //rgba(13, 83, 37, 100)
+$color2: #65922B; //rgba(202, 189, 19, 100)
+$color3: #d27b82; //rgba(210, 123, 130, 100)
+$color4: #65922B; //rgba(249, 235, 201, 100)
+$color5: #6c6a29; //rgba(108, 106, 41, 100)
+*/
+/* line 10, ../compass/sass/styles.scss */
 body {
   background-color: #FFF;
   color: #65922B;
   text-align: center;
-  margin: 0px;
+  margin: -15px;
 }
 
 /*font-family: 'Unkempt', cursive;  (extra front style)*/
-/* line 27, ../compass/sass/styles.scss */
+/* line 20, ../compass/sass/styles.scss */
 .jumbotron p {
   margin-bottom: 15px;
   font-size: 50px;
   font-weight: 200;
 }
 
-/* line 33, ../compass/sass/styles.scss */
+/* line 26, ../compass/sass/styles.scss */
 .site-wrapper {
+  color: #65922B;
+  background-image: url("#");
+  background-repeat: no-repeat;
+  background-size: 100%;
   text-align: center;
   font-family: 'Henny Penny', cursive;
 }
 
-/* line 38, ../compass/sass/styles.scss */
+/* line 35, ../compass/sass/styles.scss */
 .inner .cover {
   margin: 150px 0px 150px 0px;
 }
 
-/* line 42, ../compass/sass/styles.scss */
+/* line 39, ../compass/sass/styles.scss */
 .jumbotron {
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.1), black), url("../img/cartoon.jpg");
   margin-bottom: 50px;
@@ -40,78 +49,78 @@ body {
   text-shadow: #385D3E 0.3em 0.3em 0.3em;
 }
 
-/* line 53, ../compass/sass/styles.scss */
+/* line 50, ../compass/sass/styles.scss */
 section .row {
   margin: 15px 0px 15px 0px;
   height: 400px;
 }
 
-/* line 58, ../compass/sass/styles.scss */
+/* line 55, ../compass/sass/styles.scss */
 a {
   color: #65922B;
 }
 
-/* line 62, ../compass/sass/styles.scss */
+/* line 59, ../compass/sass/styles.scss */
 a:hover {
   color: #d27b82;
   text-decoration: none;
 }
 
-/* line 67, ../compass/sass/styles.scss */
+/* line 64, ../compass/sass/styles.scss */
 h1, h2, h3 {
   font-family: 'Henny Penny', cursive;
   color: #65922B;
   margin-top: 60px;
 }
 
-/* line 73, ../compass/sass/styles.scss */
+/* line 70, ../compass/sass/styles.scss */
 .lead h1 {
   font-size: 150px;
   margin-top: 60px;
   margin-bottom: 5px;
 }
 
-/* line 79, ../compass/sass/styles.scss */
+/* line 76, ../compass/sass/styles.scss */
 .lead {
   text-align: center;
 }
 
-/* line 83, ../compass/sass/styles.scss */
+/* line 80, ../compass/sass/styles.scss */
 .slidePics {
   height: 300px;
   margin: 10px;
   text-align: -webkit-center;
 }
 
-/* line 89, ../compass/sass/styles.scss */
+/* line 86, ../compass/sass/styles.scss */
 p {
   font-family: 'Shadows Into Light Two', cursive;
 }
 
-/* line 93, ../compass/sass/styles.scss */
+/* line 90, ../compass/sass/styles.scss */
 img.sample {
   margin: 12px;
   width: 90%;
   /*border: #65922B solid 2px;*/
 }
 
-/* line 100, ../compass/sass/styles.scss */
+/* line 97, ../compass/sass/styles.scss */
 img.profile {
   width: 55%;
 }
 
-/* line 104, ../compass/sass/styles.scss */
+/* line 101, ../compass/sass/styles.scss */
 footer {
   margin-top: 50px;
   margin-bottom: 50px;
 }
 
-/* line 114, ../compass/sass/styles.scss */
+/* line 111, ../compass/sass/styles.scss */
 h3.price {
   margin: 5px;
 }
 
-/* line 120, ../compass/sass/styles.scss */
+/* line 117, ../compass/sass/styles.scss */
 .login, .register {
   background-color: white;
   width: 500px;
@@ -122,19 +131,19 @@ h3.price {
   padding-top: 10px;
 }
 
-/* line 129, ../compass/sass/styles.scss */
+/* line 126, ../compass/sass/styles.scss */
 .loginheading {
   text-align: center;
   margin-bottom: 30px;
 }
 
-/* line 133, ../compass/sass/styles.scss */
+/* line 130, ../compass/sass/styles.scss */
 .loginbottomtext {
   text-align: center;
   margin-top: 20px;
 }
 
-/* line 137, ../compass/sass/styles.scss */
+/* line 134, ../compass/sass/styles.scss */
 .pagecontainer {
   margin-top: 30px;
   background-color: white;
@@ -143,7 +152,7 @@ h3.price {
   margin-right: 20px;
 }
 
-/* line 145, ../compass/sass/styles.scss */
+/* line 142, ../compass/sass/styles.scss */
 .pageheader {
   width: 100%;
   height: 60px;
@@ -152,7 +161,7 @@ h3.price {
   padding: 0;
 }
 
-/* line 152, ../compass/sass/styles.scss */
+/* line 149, ../compass/sass/styles.scss */
 .menubutton {
   color: white;
   background-color: #ff6800;
@@ -161,31 +170,13 @@ h3.price {
   margin-top: 10px;
 }
 
-/* line 159, ../compass/sass/styles.scss */
+/* line 156, ../compass/sass/styles.scss */
 .pagetitle {
   color: white;
   margin: 10px;
 }
 
-/* line 163, ../compass/sass/styles.scss */
+/* line 160, ../compass/sass/styles.scss */
 .contentheight {
   height: 300px;
-}
-
-/* line 172, ../compass/sass/styles.scss */
-.affix {
-  right: 0px;
-}
-
-/* line 176, ../compass/sass/styles.scss */
-.affix-top {
-  right: 0px;
-  position: fixed;
-}
-
-/* line 181, ../compass/sass/styles.scss */
-.scroll-debug {
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
 }

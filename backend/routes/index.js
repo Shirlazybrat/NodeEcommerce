@@ -4,12 +4,20 @@ var mongoose = require('mongoose');
 var mongoUrl = "mongodb://127.0.0.1:27017/ecommerce";
 mongoose.connect(mongoUrl);
 var Account = require('../models/accounts');
-var randToken = require('rand-token');
+var randToken = require('rand-token'),uid;
 
 //include bcrypt
 var bcrypt = require('bcrypt-nodejs');
 
 router.post('/register', function(req,res,next){
+
+//to check if the username is already used...
+		// {username: req.body.username}, //This is the droid we're looking for
+		// function(error, document){
+	
+		// 	if (document == null){
+		// 	}
+		// 	else {
 
 	if (req.body.password != req.body.password2){
 		res.json({
@@ -42,6 +50,9 @@ router.post('/register', function(req,res,next){
 	});
 	
 }
+
+//@ post('/register'), do aAccount.find({username: req.body.username}).
+//If the result is not null, res.json({failure: 'usernameTaken'), })
 
 });
 
@@ -76,7 +87,9 @@ router.post('/login', function(req,res,next){
 		}
 	)
 });
-
+//logout function
+// --$cookies.put('token', '');
+// -- $cookies.remove('token');
 
 router.get('/getUserData', function(req,res,next){
 	var userToken = req.query.token; // the XXX in ?token=[XXX]

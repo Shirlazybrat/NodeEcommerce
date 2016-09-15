@@ -1,17 +1,24 @@
-/* https://coolors.co/65922b-74ba2a-d27b82-f9ebc9-385d3e
+/* Coolors Exported Palette - coolors.co/65922b-74ba2a-d27b82-f9ebc9-385d3e */
 
-$color1: #0d5325; //rgba(13, 83, 37, 100)
-$color2: #65922B; //rgba(202, 189, 19, 100)
-$color3: #d27b82; //rgba(210, 123, 130, 100)
-$color4: #65922B; //rgba(249, 235, 201, 100)
-$color5: #6c6a29; //rgba(108, 106, 41, 100)
-*/
+/* HSL */
+// $color1: hsla(86%, 54%, 37%, 1);
+// $color2: hsla(89%, 63%, 45%, 1);
+// $color3: hsla(355%, 49%, 65%, 1);
+// $color4: hsla(43%, 80%, 88%, 1);
+// $color5: hsla(130%, 25%, 29%, 1);
+
+/* RGB */
+// $color1: rgba(101, 146, 43, 1);
+// $color2: rgba(116, 186, 42, 1);
+// $color3: rgba(210, 123, 130, 1);
+// $color4: rgba(249, 235, 201, 1);
+// $color5: rgba(56, 93, 62, 1);
 
 body {
 	background-color: #FFF;
 	color: #65922B;
 	text-align: center;
-	margin: -15px;
+	margin: 0px;
 }
 
 /*font-family: 'Unkempt', cursive;  (extra front style)*/
@@ -24,10 +31,6 @@ body {
 }
 
 .site-wrapper {
-	color: #65922B;
-	background-image: url("#");
-	background-repeat:no-repeat;
-	background-size: 100%;
 	text-align: center;
 	font-family: 'Henny Penny', cursive; 
 }
@@ -77,10 +80,11 @@ h1, h2, h3 {
 	text-align: center;
 }
 
-// img.sliders{
-// 	height: 100px;
-// 	width: 150px;
-// }
+.slidePics{
+	height: 300px;
+	margin: 10px;
+    text-align: -webkit-center;
+}
 
 p {
 	font-family: 'Shadows Into Light Two', cursive;
@@ -105,6 +109,10 @@ footer{
 .register {
 	//background-color: black;
 	//padding: 100px 100px 100px 100px;
+}
+
+h3.price {
+	margin: 5px;
 }
 
 /////////////Login section/////////////////////////
@@ -155,3 +163,24 @@ footer{
 	.contentheight{
 		height: 300px;
 	}
+	//////////////Cart Style//////////////////////
+         
+        #divTotal {
+            //background-color: green;
+        }
+         
+        .affix {
+            right: 0px;
+        }
+         
+        .affix-top {
+            right: 0px;
+            position: fixed;
+        }
+         
+        .scroll-debug {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+        }
+        //////////////////////////////////////////

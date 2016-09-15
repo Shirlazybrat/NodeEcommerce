@@ -1,0 +1,45 @@
+<div>
+    <!-- list of items with a button to remove that item -->
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-7 col-md-8 col-sm-8 col-lg-8">
+            <div class="panel panel-success">
+            <div class="panel-heading">
+            <h3 class="panel-title">Panel title</h3>
+            </div>
+            <table class="table">
+              <th>
+                <td>Item</td>
+                <td>Quantity</td>
+                <td>Price</td>
+              </th>
+              <tr ng-repeat="cart in carts track by $index">
+                <td>{{item}}</td>
+                <td>{{quantity}}</td>
+                <td>{{price}}</td>
+                <td><button ng-click="remove($index)" class="btn btn-danger btn-sm">Remove</button></td>
+              </tr>
+            </table>
+        </div>
+      </div>
+ 
+        <div class="col-xs-5 col-md-4 col-sm-4 col-lg-4">
+          <div class="panel panel-success">
+          <div id="divTotal" class="panel-heading">
+          <h3 class="panel-title">Total</h3>
+          </div>
+          <div class="panel-body">
+              <h2>$$$</h2>
+          </div>
+          </div>
+ 
+<div class="text-center">
+    <a href="#/checkout" class="btn btn-success">Checkout <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+    </a>
+</div>
+        </div>
+
+</div>
+
+</div>
+</div>

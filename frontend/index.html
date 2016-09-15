@@ -12,9 +12,10 @@
     <title>Sheena's Pickles</title>
  
 <!-- http://www.alishamooredesign.com/Sheena-s-Pickles -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -45,10 +46,8 @@
 
 </head>
 
-
-  <body ng-controller="mainController" id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" class="coverPg">
-  <!-- Header-Jumbotron-Carousel of photos-->
-<header>  
+<body ng-controller="mainController" id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" class="coverPg">
+ 
   <!-- <div id="lead" class="row col-md-12"> -->
           <!-- Navigation -->
     <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
@@ -65,7 +64,7 @@
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav navbar-left">
                     <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
                     <li class="hidden">
                         <a class="page-scroll" href="#page-top"></a>
@@ -101,7 +100,7 @@
           <a href="#/login" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
           </li> 
           <li>
-          <a type="button" class="btn btn-sm">
+          <a href="#/options" type="button" class="btn btn-sm">
           <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Shop
           </a>
           </li>
@@ -114,13 +113,15 @@
         </div>
         <!-- /.container -->
     </nav>
-          <div class="jumbotron">
-          <div class="container-fluid lead">
-           <h1><a href="index.html">Sheena's Pickles</a></h1>
-            <h2>A crunch in every bite</h2>
-         </div>
-        </div>
-    </header>
+      <!-- Header-Jumbotron-Carousel of photos-->
+<header>  
+  <div class="jumbotron">
+    <div class="container-fluid lead">
+      <h1><a href="index.html">Sheena's Pickles</a></h1>
+      <h2>A crunch in every bite</h2>
+    </div>
+  </div>
+</header>
 
 <div id="views" ng-view></div>
     
