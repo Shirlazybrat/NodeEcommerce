@@ -46,7 +46,7 @@
         <p>Traditional Dill Pickles</p>
         <p><a href="#">More</a> about this item.</p>
         <h3 class="price">$5.00</h3>
-        <p><select id="quantity" name="quantity" class="form-control">
+        <p><select ng-model="dillQuan" id="quantity" name="quantity" class="form-control">
           <option value="1">only 1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -56,7 +56,7 @@
           <option value="3">7</option>
           <option value="3">8</option>
         </select>
-     <a ng-click="addToCart()" class="btn btn-success btn-sm" role="button" type="submit" id="dill">Add To Cart</a></p>
+     <a ng-click="addToCart('The Dilly (Dill)', dillQuan)" class="btn btn-success btn-sm" role="button" type="submit" id="dill">Add To Cart</a></p>
       </div>
     </div>
   </div>
@@ -71,7 +71,7 @@
         <p>Your favorite Bread 'n Butter delights.</p>
         <p><a href="#">More</a> about this item.</p>
         <h3 class="price">$5.00</h3>
-        <p><select id="quantity" name="quantity" class="form-control">
+        <p><select ng-model="bbQuan" id="quantity" name="quantity" class="form-control">
           <option value="1">only 1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -81,7 +81,7 @@
           <option value="3">7</option>
           <option value="3">8</option>
         </select>
-     <a ng-click="addToCart()" class="btn btn-success btn-sm" role="button" type="submit" id="BB">Add To Cart</a></p>
+     <a ng-click="addToCart('Bread & Butter', bbQuan)" class="btn btn-success btn-sm" role="button" type="submit" id="BB">Add To Cart</a></p>
       </div>
     </div>
   </div>
@@ -96,7 +96,7 @@
         <p>The spiciest pickles for the bravest palate</p>
         <p><a href="#">More</a> about this item.</p>
         <h3 class="price">$5.00</h3>
-        <p><select id="quantity" name="quantity" class="form-control">
+        <p><select ng-model="heat2Quan" id="quantity" name="quantity" class="form-control">
           <option value="1">only 1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -106,7 +106,7 @@
           <option value="3">7</option>
           <option value="3">8</option>
         </select>
-     <a ng-click="addToCart()" class="btn btn-success btn-sm" role="button" type="submit" id="pepper">Add To Cart</a></p>
+     <a ng-click="addToCart('The Heat 2', heat2Quan)" class="btn btn-success btn-sm" role="button" type="submit" id="pepper">Add To Cart</a></p>
       </div>
     </div>
   </div>

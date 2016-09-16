@@ -6,11 +6,15 @@ mongoose.connect(mongoUrl);
 var Account = require('../models/accounts');
 var randToken = require('rand-token'),uid;
 
+//this is our config module we have access to
+//configVars.secretTestKey
+var configVars = require('../config/config'); 
+var stripe = require("stripe")(configVars.secretTestKey);
+
 //include bcrypt
 var bcrypt = require('bcrypt-nodejs');
 
 router.post('/register', function(req,res,next){
-
 //to check if the username is already used...
 		// {username: req.body.username}, //This is the droid we're looking for
 		// function(error, document){
@@ -33,7 +37,6 @@ router.post('/register', function(req,res,next){
 			token: token
 });
 
-
 	newAccount.save(function(error, documentAdded){
 		if(error){
 			res.json({
@@ -47,13 +50,10 @@ router.post('/register', function(req,res,next){
 			//add tokenExpDate
 			});
 		}
-	});
-	
+	});	
 }
-
 //@ post('/register'), do aAccount.find({username: req.body.username}).
 //If the result is not null, res.json({failure: 'usernameTaken'), })
-
 });
 
 router.post('/login', function(req,res,next){
@@ -116,6 +116,25 @@ router.get('/getUserData', function(req,res,next){
 			}
 		)
 	}
+});
+
+router.post('/stripe', function(req,res,next){
+	
+	stripe.charges.create({
+	  amount: req.body.amount,
+	  currency: "usd",
+	  source: req.body.stripeToken, // obtained with Stripe.js
+	  description: "Charge for " + req.body.email
+	}).then ((charge) => {
+		res.json({
+			success: 'paid'
+			});
+	}, function(err) {
+	  // asynchronously called
+	  res.json({
+	  	failure: 'failedPayment'
+	  });
+	});
 });
 
 module.exports = router;

@@ -53,21 +53,19 @@ $scope.addToCart = function(idOfitem, quantity){
 	if($location.path() == '/cart'){
 		$scope.item = $cookies.get('cartItems').split(',');
 		$scope.quantity = $cookies.get('cartQuantity').split(',');
-		
+		var carts = [];
 		for(var i = 0; i < cartItems.length; i++){
 			$scope.carts.push({
 					item: item[i]
 			})
 		}
-		for (var j = 0; j < cartQuantity.length; j++){
-			$scope.carts.push({
-					quantity: quantity[j]
-			})
-		}
+		// for (var j = 0; j < cartQuantity.length; j++){
+		// 	$scope.carts.push({
+		// 			quantity: quantity[j]
+		// 	})
+		// }
 	}
-	else {
-		console.log(carts);
-	}
+	console.log(carts);	
 }
 
 
@@ -82,7 +80,47 @@ $scope.addToCart = function(idOfitem, quantity){
 	
 	// remove item
     $scope.remove = function(index) {
-    	$scope.items.splice(index, 1);
+    	$scope.carts.splice(index, 1);
+    };
+
+    //API Key
+//sercret key: sk_test_DOaPyiHDsX1cGeDdXbafYQiS
+//publishablekey: pk_test_sCIdiilhnjLw852kQP18ZFbU
+//secret key: sk_live_5FM5DlfmjPCnhyAsCri3AeJy
+//live publish key: pk_live_iivQMMwenGy0s6AGmR2hucCn
+
+    $scope.payOrder = function(userOptions) {
+        $scope.errorMessage = "";
+        var handler = StripeCheckout.configure({
+            key: 'pk_test_sCIdiilhnjLw852kQP18ZFbU',
+            image: '../img/Newlogo.png',
+            locale: 'auto',
+            token: function(token) {
+                console.log("The token Id is: ");
+                console.log(token.id);
+
+                $http.post(apiPath + '/stripe', {
+                    amount: $scope.total * 100,
+                    stripeToken: token.id,
+                    token: $cookies.get('token')
+                        //This will pass amount, stripeToken, and token to /payment
+                }).then(function successCallback(response) {
+                    console.log(response.data);
+                    if (response.data.success) {
+                        //Say thank you
+                        $location.path('/checkout');
+                    } else {
+                        $scope.errorMessage = response.data.message;
+                        //same on the checkout page
+                    }
+                }, function errorCallback(response) {});
+            }
+        });
+        handler.open({
+            name: "Sheena's Pickles",
+            description: 'A Crunch in Every Bite',
+            amount: $scope.total * 100
+        });
     };
 
   // get store and cart from service
@@ -137,6 +175,10 @@ ecommerceApp.config(function($routeProvider){
 	})
 	.when('/cart',{
 	templateUrl: 'views/cart.html',
+		controller: 'mainController'
+	})
+	.when('/checkout',{
+	templateUrl: 'views/checkout.html',
 		controller: 'mainController'
 	})
 	.otherwise({

@@ -25,6 +25,8 @@
 <script src="js/angular-route.min.js"></script>
 <script src="js/angular-cookies.min.js"></script>
 
+<script src="https://checkout.stripe.com/checkout.js"></script>
+
 <script tpye="text/javascript"  src="js/mainController.js"></script>
 
 <!-- Bootstrap Core CSS -->
@@ -71,14 +73,11 @@
                     </li>
                     <li class="dropdown">
                     <a href="#delights" class="dropdown-toggle page-scroll" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Delights <span class="caret"></span></a>
-                        <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
+            <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Pickles</a></li>
+            <li><a href="#">Jams</a></li>
+            <li><a href="#">Butters</a></li>
             <li class="seperator"></li>
-            <li><a href="#">Separated link</a></li>
-            <li class="seperator"></li>
-            <li><a href="#">One more separated link</a></li>
           </ul>
                     </li>
                     <li>
@@ -94,10 +93,10 @@
                         <a class="page-scroll" href="#contact">Contact</a>
                     </li>
                 </ul>
-                <ul class="nav navbar-nav navbar-right">
+        <ul class="nav navbar-nav navbar-right">
         <li><p class="navbar-text">Already have an account?</p></li>
         <li>
-          <a href="#/login" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
+          <a href="#/login" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b></a>
           </li> 
           <li>
           <a href="#/options" type="button" class="btn btn-sm">
@@ -117,8 +116,9 @@
 <header>  
   <div class="jumbotron">
     <div class="container-fluid lead">
-      <h1><a href="index.html">Sheena's Pickles</a></h1>
+      <h1><a href="index.html">Sheena's Pickles & Jams</a></h1>
       <h2>A crunch in every bite</h2>
+      <a class="btn btn-success page-scroll" href="#about">Welcome!</a>
     </div>
   </div>
 </header>

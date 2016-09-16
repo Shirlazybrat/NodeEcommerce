@@ -19,13 +19,25 @@ body {
 	color: #65922B;
 	text-align: center;
 	margin: 0px;
+	position: relative;
 }
 
 /*font-family: 'Unkempt', cursive;  (extra front style)*/
 
+.jumbotron {
+	background-image: linear-gradient(to top, rgba(0,0,0, 0.1), rgba(0,0,0, 25)),url("../img/cartoon.jpg");
+    margin-bottom: 20px;
+    margin-top: 50px;
+    background-position: 0% 25%;
+    background-size: cover;
+    height: 500px;
+    background-repeat: no-repeat;
+    color: white;
+    text-shadow: #385D3E 0.3em 0.3em 0.3em;
+}
 
 	.jumbotron p {
-    margin-bottom: 15px;
+    margin-bottom: 30px;
     font-size: 50px;
     font-weight: 200;
 }
@@ -35,25 +47,22 @@ body {
 	font-family: 'Henny Penny', cursive; 
 }
 
-.inner .cover {
-	margin: 150px 0px 150px 0px;
-}
+// .inner .cover {
+// 	margin: 150px 0px 150px 0px;
+// }
 
-.jumbotron {
-	background-image: linear-gradient(to top, rgba(0,0,0, 0.1), rgba(0,0,0, 25)),url("../img/cartoon.jpg");
-    margin-bottom: 50px;
-    background-position: 0% 25%;
-    background-size: cover;
-    height: 500px;
-    background-repeat: no-repeat;
-    color: white;
-    text-shadow: #385D3E 0.3em 0.3em 0.3em;
-}
 
 section .row{
-	margin: 15px 0px 15px 0px;
-	height: 400px;
+	margin: 0px 0px 15px 0px;
 }
+
+section#delights {
+	padding-top: 0px;
+    padding-bottom: 0px;
+    text-align: center;
+    // height: 500px;
+}
+
 
 a {
 	color: #65922B;
@@ -67,11 +76,11 @@ a:hover {
 h1, h2, h3 {
 	font-family: 'Henny Penny', cursive;
 	color: #65922B;
-	margin-top: 60px;
+	//margin-top: 60px;
 }
 
 .lead h1 {
-	font-size: 150px;
+	font-size: 125px;
 	margin-top: 60px;
 	margin-bottom: 5px;
 }
@@ -80,9 +89,9 @@ h1, h2, h3 {
 	text-align: center;
 }
 
-.slidePics{
-	height: 300px;
-	margin: 10px;
+.slidePics {
+	max-height: 700px;
+	margin: 10px 25px 10px 25px;
     text-align: -webkit-center;
 }
 
@@ -94,7 +103,6 @@ img.sample {
 	margin: 12px;
 	width: 90%;
 	/*border: #65922B solid 2px;*/
-	
  }
 
  img.profile {
@@ -111,7 +119,7 @@ footer{
 	//padding: 100px 100px 100px 100px;
 }
 
-h3.price {
+h3.price,  h2.price{
 	margin: 5px;
 }
 
