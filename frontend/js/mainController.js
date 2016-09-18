@@ -42,7 +42,6 @@ $scope.login = function(){
 $scope.addToCart = function(idOfitem, quantity){
 	var oldCart = $cookies.get('cartItems');
 	var newCart = oldCart + "," + idOfitem;
-	$cookies.put('cartItems', newCart);
 	var oldQuantity = $cookies.get('cartQuantity');
 	var newQuantity = oldQuantity + "," + quantity;
 	$cookies.put('cartItems', newCart);

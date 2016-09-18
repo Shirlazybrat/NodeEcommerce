@@ -184,7 +184,7 @@
 <div class="form-group">
   <label class="col-md-3 control-label" for="textinput">Name</label>  
   <div class="col-md-9">
-    <input id="name" id="textinput" name="textinput" type="text" placeholder="Enter your name" class="form-control input-md">
+    <input id="name" ng-model="name" id="textinput" name="textinput" type="text" placeholder="Enter your name" class="form-control input-md">
   </div>
 </div>
 
@@ -192,7 +192,7 @@
 <div class="form-group">
   <label class="col-md-3 control-label" for="selectbasic">Location Type</label>
   <div class="col-md-9">
-    <select id="home" id="selectbasic" name="selectbasic" class="form-control">
+    <select id="home" ng-model="home" id="selectbasic" name="selectbasic" class="form-control">
       <option value="1">House</option>
       <option value="2">Apartment</option>
       <option value="3">Business</option>
@@ -203,7 +203,7 @@
 <!-- Multiple Radios (inline) -->
 <div class="form-group">
   <label class="col-md-3 control-label" for="radios">Options</label>
-  <div id="deliver" class="col-md-6"> 
+  <div id="deliver" ng-model="deliver" class="col-md-6"> 
     <label class="radio-inline" for="radios-0">
       <input type="radio" name="radios" id="radios-0" value="1" checked="checked">
       Delivery
@@ -218,28 +218,28 @@
 <div class="form-group">
   <label class="col-md-3 control-label" for="textinput">Address</label>  
   <div class="col-md-9">
-    <input id="address" id="textinput" name="textinput" type="text" placeholder="Enter your address" class="form-control input-md">
+    <input id="address" ng-model="address" id="textinput" name="textinput" type="text" placeholder="Enter your address" class="form-control input-md">
   </div>
   </div>
 
   <div class="form-group">
   <label class="col-md-3 control-label" for="textinput">City</label>  
   <div class="col-md-9">
-    <input id="city" id="textinput" name="textinput" type="text" placeholder="Enter city" class="form-control input-md">
+    <input id="city" ng-model="city" id="textinput" name="textinput" type="text" placeholder="Enter city" class="form-control input-md">
   </div>
   </div>
 
   <div class="form-group">
   <label class="col-md-3 control-label" for="textinput">Zipcode</label>  
   <div class="col-md-9">
-    <input id="zip" id="textinput" name="textinput" type="text" placeholder="Enter zipcode" class="form-control input-md">
+    <input id="zip" ng-model="zip" id="textinput" name="textinput" type="text" placeholder="Enter zipcode" class="form-control input-md">
   </div>
   </div>
 
   <div class="form-group">
   <label class="col-md-3 control-label" for="textinput">Phone Number</label>  
   <div class="col-md-9">
-    <input id="phone" id="numinput" name="phoneNumber" type="phonenumber" placeholder="555-555-5555" class="form-control input-md">
+    <input id="phone" ng-model="phone" id="numinput" name="phoneNumber" type="phonenumber" placeholder="555-555-5555" class="form-control input-md">
   </div>
  </div>
   
@@ -247,7 +247,7 @@
 <div class="form-group">
   <label class="col-md-3 control-label" for="textarea">Specific Details</label>
   <div class="col-md-9">                     
-    <textarea id="details" class="form-control" id="textarea" placeholder="added details here" name="textarea"></textarea>
+    <textarea id="details" ng-model="details" class="form-control" id="textarea" placeholder="added details here" name="textarea"></textarea>
   </div>
 </div>
 
