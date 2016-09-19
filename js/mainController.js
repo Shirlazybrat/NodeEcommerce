@@ -1,6 +1,6 @@
 var ecommerceApp = angular.module('ecommerceApp', ['ngRoute', 'ngCookies']);
 ecommerceApp.controller('mainController', function($scope, $http, $location, $cookies){
-	 var apiPath = "http://127.0.0.1:3000";
+	 var apiPath = "http://shirletterly.com:3000";
 
 
 	 $scope.register = function(){
