@@ -132,7 +132,7 @@ $scope.addToCart = function(idOfitem, quantity){
   // }
 
 
-// //move this to the correct location
+// **** move this to the correct location
 // 	 //if($location.path == "")
 // 	 $http.get(apiPath + '/getUserData?token=' + $cookies.get('token'))
 // 	 .then(function successCallback(response){

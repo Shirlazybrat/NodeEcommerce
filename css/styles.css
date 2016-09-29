@@ -97,23 +97,23 @@ img.sample {
   /*border: #65922B solid 2px;*/
 }
 
-/* line 108, ../compass/sass/styles.scss */
-img.profile {
-  width: 55%;
+/* line 110, ../compass/sass/styles.scss */
+.profile img.profileImg {
+  max-height: 425px;
 }
 
-/* line 112, ../compass/sass/styles.scss */
+/* line 115, ../compass/sass/styles.scss */
 footer {
   margin-top: 50px;
   margin-bottom: 50px;
 }
 
-/* line 122, ../compass/sass/styles.scss */
+/* line 125, ../compass/sass/styles.scss */
 h3.price, h2.price {
   margin: 5px;
 }
 
-/* line 128, ../compass/sass/styles.scss */
+/* line 131, ../compass/sass/styles.scss */
 .login, .register {
   background-color: white;
   width: 500px;
@@ -124,19 +124,19 @@ h3.price, h2.price {
   padding-top: 10px;
 }
 
-/* line 137, ../compass/sass/styles.scss */
+/* line 140, ../compass/sass/styles.scss */
 .loginheading {
   text-align: center;
   margin-bottom: 30px;
 }
 
-/* line 141, ../compass/sass/styles.scss */
+/* line 144, ../compass/sass/styles.scss */
 .loginbottomtext {
   text-align: center;
   margin-top: 20px;
 }
 
-/* line 145, ../compass/sass/styles.scss */
+/* line 148, ../compass/sass/styles.scss */
 .pagecontainer {
   margin-top: 30px;
   background-color: white;
@@ -145,7 +145,7 @@ h3.price, h2.price {
   margin-right: 20px;
 }
 
-/* line 153, ../compass/sass/styles.scss */
+/* line 156, ../compass/sass/styles.scss */
 .pageheader {
   width: 100%;
   height: 60px;
@@ -154,7 +154,7 @@ h3.price, h2.price {
   padding: 0;
 }
 
-/* line 160, ../compass/sass/styles.scss */
+/* line 163, ../compass/sass/styles.scss */
 .menubutton {
   color: white;
   background-color: #ff6800;
@@ -163,29 +163,29 @@ h3.price, h2.price {
   margin-top: 10px;
 }
 
-/* line 167, ../compass/sass/styles.scss */
+/* line 170, ../compass/sass/styles.scss */
 .pagetitle {
   color: white;
   margin: 10px;
 }
 
-/* line 171, ../compass/sass/styles.scss */
+/* line 174, ../compass/sass/styles.scss */
 .contentheight {
   height: 300px;
 }
 
-/* line 180, ../compass/sass/styles.scss */
+/* line 183, ../compass/sass/styles.scss */
 .affix {
   right: 0px;
 }
 
-/* line 184, ../compass/sass/styles.scss */
+/* line 187, ../compass/sass/styles.scss */
 .affix-top {
   right: 0px;
   position: fixed;
 }
 
-/* line 189, ../compass/sass/styles.scss */
+/* line 192, ../compass/sass/styles.scss */
 .scroll-debug {
   position: fixed;
   bottom: 10px;

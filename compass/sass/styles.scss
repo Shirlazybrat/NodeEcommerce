@@ -105,9 +105,12 @@ img.sample {
 	/*border: #65922B solid 2px;*/
  }
 
- img.profile {
- 	width: 55%;
- }
+.profile {
+
+	 img.profileImg {
+	 	max-height: 425px;
+	 }
+}
 
 footer{
 	margin-top: 50px;
