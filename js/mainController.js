@@ -55,6 +55,38 @@ $scope.pickles = function(){
 	 	});
 	 };
 
+$scope.butters = function(){
+	 	console.log($scope.username);
+	 	$http.post(apiPath + '/butters', {
+	 		// username: $scope.username,
+	 		// password: $scope.password
+	 	}).then(function successCallback(response){
+	 		console.log(response);
+	 		if(response.data.success == 'userFound'){
+	 			$location.path('/options');
+	 			$cookies.put('username', $scope.username);
+	 		}
+	 	}, function errorCallback(response){
+	 		console.log(response);
+	 	});
+	 };
+
+$scope.jams = function(){
+	 	console.log($scope.username);
+	 	$http.post(apiPath + '/jams', {
+	 		// username: $scope.username,
+	 		// password: $scope.password
+	 	}).then(function successCallback(response){
+	 		console.log(response);
+	 		if(response.data.success == 'userFound'){
+	 			$location.path('/options');
+	 			$cookies.put('username', $scope.username);
+	 		}
+	 	}, function errorCallback(response){
+	 		console.log(response);
+	 	});
+	 };
+
 $scope.addToCart = function(idOfitem, quantity){
 	var oldCart = $cookies.get('cartItems');
 	var newCart = oldCart + "," + idOfitem;
@@ -186,6 +218,14 @@ ecommerceApp.config(function($routeProvider){
 	})
 	.when('/pickles',{
 	templateUrl: 'views/pickles.html',
+		controller: 'mainController'
+	})
+	.when('/butters',{
+	templateUrl: 'views/butters.html',
+		controller: 'mainController'
+	})
+	.when('/jams',{
+	templateUrl: 'views/jams.html',
 		controller: 'mainController'
 	})
 	.when('/options',{

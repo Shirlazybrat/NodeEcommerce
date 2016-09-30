@@ -151,7 +151,7 @@ img.sample {
   margin-top: 0px;
 }
 
-/* line 169, ../compass/sass/styles.scss */
+/* line 168, ../compass/sass/styles.scss */
 .split {
   background: #f5f5f5;
   margin-top: 0px;
@@ -159,21 +159,21 @@ img.sample {
   border-bottom: 1px solid #ddd;
   text-align: center;
 }
-/* line 176, ../compass/sass/styles.scss */
+/* line 175, ../compass/sass/styles.scss */
 .split .row {
   margin-right: 0px;
   margin-left: -15px;
 }
-/* line 180, ../compass/sass/styles.scss */
+/* line 179, ../compass/sass/styles.scss */
 .split .row img {
   width: 500px;
 }
-/* line 184, ../compass/sass/styles.scss */
+/* line 183, ../compass/sass/styles.scss */
 .split .row .centered {
   text-align: center;
 }
 
-/* line 190, ../compass/sass/styles.scss */
+/* line 189, ../compass/sass/styles.scss */
 .thumbnail {
   padding: 5px;
   width: 280px;
@@ -181,7 +181,7 @@ img.sample {
   overflow: hidden;
 }
 
-/* line 197, ../compass/sass/styles.scss */
+/* line 196, ../compass/sass/styles.scss */
 .caption {
   position: absolute;
   top: 0;
@@ -196,18 +196,18 @@ img.sample {
   z-index: 2;
 }
 
-/* line 212, ../compass/sass/styles.scss */
+/* line 211, ../compass/sass/styles.scss */
 footer {
   margin-top: 50px;
   margin-bottom: 50px;
 }
 
-/* line 222, ../compass/sass/styles.scss */
+/* line 221, ../compass/sass/styles.scss */
 h3.price, h2.price {
   margin: 5px;
 }
 
-/* line 228, ../compass/sass/styles.scss */
+/* line 227, ../compass/sass/styles.scss */
 .login, .register {
   background-color: white;
   width: 500px;
@@ -218,19 +218,19 @@ h3.price, h2.price {
   padding-top: 10px;
 }
 
-/* line 237, ../compass/sass/styles.scss */
+/* line 236, ../compass/sass/styles.scss */
 .loginheading {
   text-align: center;
   margin-bottom: 30px;
 }
 
-/* line 241, ../compass/sass/styles.scss */
+/* line 240, ../compass/sass/styles.scss */
 .loginbottomtext {
   text-align: center;
   margin-top: 20px;
 }
 
-/* line 245, ../compass/sass/styles.scss */
+/* line 244, ../compass/sass/styles.scss */
 .pagecontainer {
   margin-top: 30px;
   background-color: white;
@@ -239,7 +239,7 @@ h3.price, h2.price {
   margin-right: 20px;
 }
 
-/* line 253, ../compass/sass/styles.scss */
+/* line 252, ../compass/sass/styles.scss */
 .pageheader {
   width: 100%;
   height: 60px;
@@ -248,7 +248,7 @@ h3.price, h2.price {
   padding: 0;
 }
 
-/* line 260, ../compass/sass/styles.scss */
+/* line 259, ../compass/sass/styles.scss */
 .menubutton {
   color: white;
   background-color: #ff6800;
@@ -257,29 +257,29 @@ h3.price, h2.price {
   margin-top: 10px;
 }
 
-/* line 267, ../compass/sass/styles.scss */
+/* line 266, ../compass/sass/styles.scss */
 .pagetitle {
   color: white;
   margin: 10px;
 }
 
-/* line 271, ../compass/sass/styles.scss */
+/* line 270, ../compass/sass/styles.scss */
 .contentheight {
   height: 300px;
 }
 
-/* line 280, ../compass/sass/styles.scss */
+/* line 279, ../compass/sass/styles.scss */
 .affix {
   right: 0px;
 }
 
-/* line 284, ../compass/sass/styles.scss */
+/* line 283, ../compass/sass/styles.scss */
 .affix-top {
   right: 0px;
   position: fixed;
 }
 
-/* line 289, ../compass/sass/styles.scss */
+/* line 288, ../compass/sass/styles.scss */
 .scroll-debug {
   position: fixed;
   bottom: 10px;
@@ -288,25 +288,25 @@ h3.price, h2.price {
 
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px) {
-  /* line 305, ../compass/sass/styles.scss */
+  /* line 304, ../compass/sass/styles.scss */
   section {
     width: 100%;
   }
-  /* line 307, ../compass/sass/styles.scss */
+  /* line 306, ../compass/sass/styles.scss */
   section img.profileImg {
     max-height: 425px;
   }
 }
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
-  /* line 315, ../compass/sass/styles.scss */
+  /* line 314, ../compass/sass/styles.scss */
   section {
     width: 100%;
   }
 }
 /* Landscape phones and down */
 @media (max-width: 480px) {
-  /* line 322, ../compass/sass/styles.scss */
+  /* line 321, ../compass/sass/styles.scss */
   section {
     width: 100%;
     float: none;
