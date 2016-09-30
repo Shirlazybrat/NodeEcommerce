@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html ng-app="ecommerceApp" lang="en" >
-  <head>
+<html ng-app="ecommerceApp" lang="en">
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,50 +9,35 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- <link rel="icon" href="docs/favicon.ico"> -->
-    
     <title>Sheena's Pickles</title>
- 
-<!-- http://www.alishamooredesign.com/Sheena-s-Pickles -->
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-<!-- Angular -->
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-<script src="js/angular-route.min.js"></script>
-<script src="js/angular-cookies.min.js"></script>
-
-<script src="https://checkout.stripe.com/checkout.js"></script>
-
-<script tpye="text/javascript"  src="js/mainController.js"></script>
-
-<!-- Bootstrap Core CSS -->
-<link href="css/bootstrap.min.css" rel="stylesheet">
-
-<!-- fonts -->
-<link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two|Unkempt|Henny+Penny' rel='stylesheet' type='text/css'>  
-<link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two|Unkempt|Henny+Penny' rel='stylesheet' type='text/css'>
-
-<!--Slick CSS -->
-<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
-
-<!-- Scroll CSS -->
-<link href="css/scrolling-nav.css" rel="stylesheet">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
-
-<link rel="stylesheet" href="css/styles.css" type="text/css" media="screen">
-
+    <!-- http://www.alishamooredesign.com/Sheena-s-Pickles -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- Angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
+    <script src="js/angular-cookies.min.js"></script>
+    <script src="https://checkout.stripe.com/checkout.js"></script>
+    <script tpye="text/javascript" src="js/mainController.js"></script>
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two|Unkempt|Henny+Penny' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two|Unkempt|Henny+Penny' rel='stylesheet' type='text/css'>
+    <!--Slick CSS -->
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <!-- Scroll CSS -->
+    <link href="css/scrolling-nav.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/styles.css" type="text/css" media="screen">
 </head>
 
 <body ng-controller="mainController" id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" class="coverPg">
- 
-  <!-- <div id="lead" class="row col-md-12"> -->
-          <!-- Navigation -->
+    <!-- <div id="lead" class="row col-md-12"> -->
+    <!-- Navigation -->
     <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container-fluid">
             <div class="navbar-header page-scroll">
@@ -63,7 +49,6 @@
                 </button>
                 <a class="navbar-brand page-scroll" href="#page-top">Sheena Pickles & Jams</a>
             </div>
-
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav navbar-left">
@@ -72,77 +57,71 @@
                         <a class="page-scroll" href="#page-top"></a>
                     </li>
                     <li class="dropdown">
-                    <a href="#delights" class="dropdown-toggle page-scroll" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Delights <span class="caret"></span></a>
-            <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Pickles</a></li>
-            <li><a href="#">Jams</a></li>
-            <li><a href="#">Butters</a></li>
-            <li class="seperator"></li>
-          </ul>
+                        <a href="#delights" class="dropdown-toggle page-scroll" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Delights <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#/pickles">Pickles</a></li>
+                            <li><a href="#/jams">Jams</a></li>
+                            <li><a href="#/butters">Butters</a></li>
+                            <li class="seperator"></li>
+                        </ul>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#delights">Delights</a>
+                        <a class="page-scroll" href="#/about">About</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#about">About</a>
+                        <a class="page-scroll" href="#/events">Events</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#events">Events</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
+                        <a class="page-scroll" href="#/contact">Contact</a>
                     </li>
                 </ul>
-        <ul class="nav navbar-nav navbar-right">
-        <li><p class="navbar-text">Already have an account?</p></li>
-        <li>
-          <a href="#/login" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b></a>
-          </li> 
-          <li>
-          <a href="#/options" type="button" class="btn btn-sm">
-          <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Shop
-          </a>
-          </li>
-          <li ng-hide="loggedIn">
-            <a href="/logout">Log Out</a>
-          </li>  
-        </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <p class="navbar-text">Already have an account?</p>
+                    </li>
+                    <li>
+                        <a href="#/login" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b></a>
+                    </li>
+                    <li>
+                        <a href="#/options" type="button" class="btn btn-sm">
+                            <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Shop
+                        </a>
+                    </li>
+                    <li ng-hide="loggedIn">
+                        <a href="/logout">Log Out</a>
+                    </li>
+                </ul>
             </div>
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container-fluid -->
     </nav>
-      <!-- Header-Jumbotron-Carousel of photos-->
-<header>  
-  <div class="jumbotron">
-    <div class="container-fluid lead">
-      <h1><a href="index.html">Sheena's Pickles & Jams</a></h1>
-      <h2>A crunch in every bite</h2>
-      <a class="btn btn-success page-scroll" href="#about">Welcome!</a>
-    </div>
-  </div>
-</header>
-
-<div id="views" ng-view></div>
-    
-
+    <!-- Header-Jumbotron-Carousel of photos-->
+    <header>
+        <div class="jumbotron">
+            <div class="container-fluid lead">
+                <h1><a href="index.html">Sheena's Pickles & Jams</a></h1>
+                <h2>A crunch in every bite</h2>
+                <a class="btn btn-success page-scroll" href="#about">Welcome!</a>
+            </div>
+        </div>
+    </header>
+    <div id="views" ng-view></div>
     <footer class="text center">
-      <p>Sheena's Pickles & Jams | All Rights Reserved</p>
+        <p>Sheena's Pickles & Jams | All Rights Reserved</p>
     </footer>
-<!-- create a Stipe account for payment information -->
-<!-- https://stripe.com/ -->
-
-    <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script>
-
+    <!-- create a Stipe account for payment information -->
+    <!-- https://stripe.com/ -->
+    <script>
+    window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')
+    </script>
     <!-- jQuery -->
     <!-- <script src="js/jquery.js"></script> -->
-
     <!-- Bootstrap Core JavaScript -->
     <!-- <script src="js/bootstrap.min.js"></script> -->
-
     <!-- Scrolling Nav JavaScript -->
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/scrolling-nav.js"></script>
+</body>
 
-  </body>
 </html>

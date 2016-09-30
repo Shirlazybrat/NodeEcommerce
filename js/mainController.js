@@ -39,6 +39,22 @@ $scope.login = function(){
 	 	});
 	 };
 
+$scope.pickles = function(){
+	 	console.log($scope.username);
+	 	$http.post(apiPath + '/pickles', {
+	 		// username: $scope.username,
+	 		// password: $scope.password
+	 	}).then(function successCallback(response){
+	 		console.log(response);
+	 		if(response.data.success == 'userFound'){
+	 			$location.path('/options');
+	 			$cookies.put('username', $scope.username);
+	 		}
+	 	}, function errorCallback(response){
+	 		console.log(response);
+	 	});
+	 };
+
 $scope.addToCart = function(idOfitem, quantity){
 	var oldCart = $cookies.get('cartItems');
 	var newCart = oldCart + "," + idOfitem;
@@ -166,6 +182,10 @@ ecommerceApp.config(function($routeProvider){
 	})
 	.when('/register',{
 	templateUrl: 'views/register.html',
+		controller: 'mainController'
+	})
+	.when('/pickles',{
+	templateUrl: 'views/pickles.html',
 		controller: 'mainController'
 	})
 	.when('/options',{
