@@ -196,18 +196,31 @@ img.sample {
   z-index: 2;
 }
 
-/* line 211, ../compass/sass/styles.scss */
+/* line 210, ../compass/sass/styles.scss */
+#map-canvas {
+  width: 100%;
+  height: 300px;
+  margin: 0;
+  padding: 15px;
+}
+
+/* line 217, ../compass/sass/styles.scss */
+.map-form.row {
+  margin: 15px 0;
+}
+
+/* line 221, ../compass/sass/styles.scss */
 footer {
   margin-top: 50px;
   margin-bottom: 50px;
 }
 
-/* line 221, ../compass/sass/styles.scss */
+/* line 231, ../compass/sass/styles.scss */
 h3.price, h2.price {
   margin: 5px;
 }
 
-/* line 227, ../compass/sass/styles.scss */
+/* line 237, ../compass/sass/styles.scss */
 .login, .register {
   background-color: white;
   width: 500px;
@@ -218,19 +231,19 @@ h3.price, h2.price {
   padding-top: 10px;
 }
 
-/* line 236, ../compass/sass/styles.scss */
+/* line 246, ../compass/sass/styles.scss */
 .loginheading {
   text-align: center;
   margin-bottom: 30px;
 }
 
-/* line 240, ../compass/sass/styles.scss */
+/* line 250, ../compass/sass/styles.scss */
 .loginbottomtext {
   text-align: center;
   margin-top: 20px;
 }
 
-/* line 244, ../compass/sass/styles.scss */
+/* line 254, ../compass/sass/styles.scss */
 .pagecontainer {
   margin-top: 30px;
   background-color: white;
@@ -239,7 +252,7 @@ h3.price, h2.price {
   margin-right: 20px;
 }
 
-/* line 252, ../compass/sass/styles.scss */
+/* line 262, ../compass/sass/styles.scss */
 .pageheader {
   width: 100%;
   height: 60px;
@@ -248,7 +261,7 @@ h3.price, h2.price {
   padding: 0;
 }
 
-/* line 259, ../compass/sass/styles.scss */
+/* line 269, ../compass/sass/styles.scss */
 .menubutton {
   color: white;
   background-color: #ff6800;
@@ -257,29 +270,29 @@ h3.price, h2.price {
   margin-top: 10px;
 }
 
-/* line 266, ../compass/sass/styles.scss */
+/* line 276, ../compass/sass/styles.scss */
 .pagetitle {
   color: white;
   margin: 10px;
 }
 
-/* line 270, ../compass/sass/styles.scss */
+/* line 280, ../compass/sass/styles.scss */
 .contentheight {
   height: 300px;
 }
 
-/* line 279, ../compass/sass/styles.scss */
+/* line 289, ../compass/sass/styles.scss */
 .affix {
   right: 0px;
 }
 
-/* line 283, ../compass/sass/styles.scss */
+/* line 293, ../compass/sass/styles.scss */
 .affix-top {
   right: 0px;
   position: fixed;
 }
 
-/* line 288, ../compass/sass/styles.scss */
+/* line 298, ../compass/sass/styles.scss */
 .scroll-debug {
   position: fixed;
   bottom: 10px;
@@ -288,25 +301,25 @@ h3.price, h2.price {
 
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px) {
-  /* line 304, ../compass/sass/styles.scss */
+  /* line 314, ../compass/sass/styles.scss */
   section {
     width: 100%;
   }
-  /* line 306, ../compass/sass/styles.scss */
+  /* line 316, ../compass/sass/styles.scss */
   section img.profileImg {
     max-height: 425px;
   }
 }
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
-  /* line 314, ../compass/sass/styles.scss */
+  /* line 324, ../compass/sass/styles.scss */
   section {
     width: 100%;
   }
 }
 /* Landscape phones and down */
 @media (max-width: 480px) {
-  /* line 321, ../compass/sass/styles.scss */
+  /* line 331, ../compass/sass/styles.scss */
   section {
     width: 100%;
     float: none;

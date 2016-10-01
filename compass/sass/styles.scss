@@ -207,6 +207,16 @@ img.sample {
     z-index:2;
 }
 
+#map-canvas {
+  	width: 100%; 
+  	height: 300px;
+	margin: 0;
+	padding: 15px;
+}
+
+.map-form.row {
+	margin:15px 0;
+}
 
 footer{
 	margin-top: 50px;
