@@ -1,8 +1,7 @@
 var ecommerceApp = angular.module('ecommerceApp', ['ngRoute', 'ngCookies']);
 ecommerceApp.controller('mainController', function($scope, $http, $location, $cookies){
 	 var apiPath = "http://shirletterly.com:3000";
-
-
+	 
 	 $scope.register = function(){
 	 	console.log($scope.username);
 	 	$http.post(apiPath + '/register', {
@@ -87,43 +86,84 @@ $scope.jams = function(){
 	 	});
 	 };
 
-$scope.addToCart = function(idOfitem, quantity){
+
+
+$scope.addToCart = function(idOfitem, quantity, amount){
 	var oldCart = $cookies.get('cartItems');
-	var newCart = oldCart + "," + idOfitem;
+	if (oldCart === undefined){
+		var newCart = idOfitem
+	}
+	else {
+		newCart = oldCart + "," + idOfitem;
+	}
+	console.log(oldCart);
+	console.log(newCart);
+	
 	var oldQuantity = $cookies.get('cartQuantity');
-	var newQuantity = oldQuantity + "," + quantity;
+	if (oldQuantity === undefined){
+		var newQuantity = quantity;
+	}
+	else {
+		newQuantity = oldQuantity + "," + quantity;
+	}
+	
+	var oldAmount = $cookies.get('cartAmount');
+	if (oldAmount === undefined){
+		var newAmount = amount;
+	}
+	else {
+		newAmount = oldAmount + "," + amount
+	}
+
 	$cookies.put('cartItems', newCart);
 	$cookies.put('cartQuantity', newQuantity);
-	console.log(newQuantity.split(','));
+	$cookies.put('cartAmount', newAmount);
+	
+	newQuantity = newQuantity.split(",");
 	console.log(quantity);
-
-	if($location.path() == '/cart'){
+	console.log(newQuantity);
+	var cartItems = newCart.split(",");
 		$scope.item = $cookies.get('cartItems').split(',');
 		$scope.quantity = $cookies.get('cartQuantity').split(',');
+		$scope.amount = $cookies.get('cartAmount').split(',');
 		var carts = [];
 		for(var i = 0; i < cartItems.length; i++){
-			$scope.carts.push({
-					item: item[i]
+			carts.push({
+					item: cartItems[i],
+					quantity: newQuantity[i],
+					amount: newAmount[i]
 			})
+			console.log(carts);	
 		}
-		// for (var j = 0; j < cartQuantity.length; j++){
-		// 	$scope.carts.push({
-		// 			quantity: quantity[j]
-		// 	})
-		// }
-	}
-	console.log(carts);	
+		$scope.carts = carts;
 }
 
 
-// $scope.getCart = function(){
-//     var cartItems = $cookies.get('cartItems');
-//     var cartItemsArray = cartItems.split(',');
-//     for(var i = 0l i<cartItemsArray.length; i++){
-        //do stuff with each index
-        //i.e., get the cost, the name, etc. and load them up into another array
-//     }
-// }
+$scope.getCart = function(){
+	var newCart = $cookies.get('cartItems');
+	
+	var newQuantity = $cookies.get('cartQuantity');
+	
+	var newAmount = $cookies.get('cartAmount');
+
+	newQuantity = newQuantity.split(",");
+	newAmount = newAmount.split(",");
+	
+	var cartItems = newCart.split(",");
+		var carts = [];
+		for(var i = 0; i < cartItems.length; i++){
+			carts.push({
+					item: cartItems[i],
+					quantity: newQuantity[i],
+					amount: newAmount[i]
+			})
+			console.log(carts);	
+		}
+		return carts;
+	}
+
+$scope.carts = $scope.getCart();
+
 	
 	// remove item
     $scope.remove = function(index) {
@@ -241,7 +281,7 @@ ecommerceApp.config(function($routeProvider){
 		controller: 'mainController'
 	})
 	.otherwise({
-	redirectTo: '/main'
+	redirectTo: '/'
 	})
 });
 	

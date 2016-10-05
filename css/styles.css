@@ -192,8 +192,6 @@ img.sample {
   padding: 2%;
   display: none;
   text-align: center;
-  color: #fff !important;
-  z-index: 2;
 }
 
 /* line 210, ../compass/sass/styles.scss */
