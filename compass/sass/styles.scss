@@ -21,7 +21,9 @@ body {
 	margin: 0px;
 	position: relative;
 }
-
+span {
+	font-size: 1.5em;
+}
 /*font-family: 'Unkempt', cursive;  (extra front style)*/
 
 .jumbotron {
@@ -189,6 +191,7 @@ img.sample {
 .thumbnail {
 	padding:5px;
 	width: 280px;
+	height: 280px;
 	position:relative;
     overflow:hidden;
 }
@@ -302,7 +305,16 @@ h3.price,  h2.price{
         }
         //////////////////////////////////////////
 
-//////////////Pickles Style//////////////////////
+//////////////options Style//////////////////////
+.thumbnailOption {
+	img{
+		padding:5px;
+		width: 250px;
+		height: 250px;
+		position:relative;
+	    overflow:hidden;
+	}
+}
 
 
 

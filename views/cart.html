@@ -12,12 +12,14 @@
                 <td>Item</td>
                 <td>Quantity</td>
                 <td>Price</td>
+                <td>Remove</td>
               </th>
               <tr ng-repeat="cart in carts track by $index">
+                <td></td>
                 <td>{{cart.item}}</td>
                 <td>{{cart.quantity}}</td>
                 <td>{{cart.amount}}</td>
-                <td><button ng-click="remove($index)" class="btn btn-danger btn-sm">Remove</button></td>
+                <td><button ng-click="remove($index)" class="btn btn-danger btn-sm">X</button></td>
               </tr>
             </table>
         </div>
@@ -29,7 +31,10 @@
           <h3 class="panel-title">Total</h3>
           </div>
           <div class="panel-body">
-              <input ng-model="total" class="price">
+              <div ng-model="total" class="price">
+              <h4>{{numItems}} items <br></h4>
+        <h3>{{total | currency}}</h3>
+          </div>
           </div>
           </div>
  

@@ -54,9 +54,9 @@ $scope.pickles = function(){
 	 	});
 	 };
 
-$scope.butters = function(){
+$scope.more = function(){
 	 	console.log($scope.username);
-	 	$http.post(apiPath + '/butters', {
+	 	$http.post(apiPath + '/more', {
 	 		// username: $scope.username,
 	 		// password: $scope.password
 	 	}).then(function successCallback(response){
@@ -176,6 +176,35 @@ $scope.carts = $scope.getCart();
 //secret key: sk_live_5FM5DlfmjPCnhyAsCri3AeJy
 //live publish key: pk_live_iivQMMwenGy0s6AGmR2hucCn
 
+	$scope.getTotalPrice = function() {
+    var total = 0;
+    var cartinfo = $scope.getCart();
+    console.log(cartinfo);
+    for (var i = 0; i < cartinfo.length; i++) {
+        var carts = cartinfo[i];
+        total += parseInt(carts.quantity * carts.amount);
+    }
+    return total;
+}
+
+$scope.total = $scope.getTotalPrice();
+console.log($scope.total)
+
+
+$scope.getNumItems = function() {
+    var numItems = 0;
+    var cartinfo = $scope.getCart();
+    console.log(cartinfo);
+    for (var i = 0; i < cartinfo.length; i++) {
+        var carts = cartinfo[i];
+        numItems += parseInt(carts.quantity);
+    }
+    return numItems;
+}
+
+$scope.numItems = $scope.getNumItems();
+console.log($scope.numItems)
+
     $scope.payOrder = function(userOptions) {
         $scope.errorMessage = "";
         var handler = StripeCheckout.configure({
@@ -204,7 +233,7 @@ $scope.carts = $scope.getCart();
             }
         });
         handler.open({
-            name: "Sheena's Pickles",
+            name: "Sheena's Pickles & Jams",
             description: 'A Crunch in Every Bite',
             amount: $scope.total * 100
         });
@@ -239,8 +268,7 @@ $scope.carts = $scope.getCart();
 // 	 }, function errorCallback(response){
 
 // 	 });
-
-	});
+});
 
 //Set up routes using the routes module
 ecommerceApp.config(function($routeProvider){
@@ -260,8 +288,8 @@ ecommerceApp.config(function($routeProvider){
 	templateUrl: 'views/pickles.html',
 		controller: 'mainController'
 	})
-	.when('/butters',{
-	templateUrl: 'views/butters.html',
+	.when('/more',{
+	templateUrl: 'views/more.html',
 		controller: 'mainController'
 	})
 	.when('/jams',{
