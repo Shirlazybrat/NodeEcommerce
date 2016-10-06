@@ -26,6 +26,16 @@ span {
 }
 /*font-family: 'Unkempt', cursive;  (extra front style)*/
 
+nav {
+	li{
+	color: #65922B;
+	}
+	.navbar-brand {
+	font-family: 'Henny Penny', cursive;
+	font-color: #65922B;
+	}
+}
+
 .jumbotron {
 	background-image: linear-gradient(to top, rgba(0,0,0, 0.1), rgba(0,0,0, 25)),url("../img/cartoon.jpg");
     margin-bottom: 20px;
@@ -34,7 +44,7 @@ span {
     background-size: cover;
     height: 500px;
     background-repeat: no-repeat;
-    color: white;
+    color: #65922B;
     text-shadow: #385D3E 0.3em 0.3em 0.3em;
 }
 
