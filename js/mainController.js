@@ -146,6 +146,11 @@ $scope.getCart = function(){
 	
 	var newAmount = $cookies.get('cartAmount');
 
+	if(newQuantity == undefined || newAmount == undefined || newCart == undefined){
+		return "Cart empty";
+	}
+	
+
 	newQuantity = newQuantity.split(",");
 	newAmount = newAmount.split(",");
 	
@@ -168,6 +173,9 @@ $scope.carts = $scope.getCart();
 	// remove item
     $scope.remove = function(index) {
     	$scope.carts.splice(index, 1);
+    	$cookies.remove('cartItems');
+    	$cookies.remove('cartQuantity');
+    	$cookies.remove('cartAmount');
     };
 
     //API Key
