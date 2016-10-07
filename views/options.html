@@ -193,9 +193,9 @@
   <div class="col-md-3 control-" for="selectbasic">Location Type</div>
   <div class="col-md-9">
     <select id="home" ng-model="home" id="selectbasic" name="selectbasic" class="form-control">
-      <option value="1">House</option>
-      <option value="2">Apartment</option>
-      <option value="3">Business</option>
+      <option value="House">House</option>
+      <option value="Apartment">Apartment</option>
+      <option value="Business">Business</option>
     </select>
   </div>
 </div>
@@ -205,11 +205,11 @@
   <div class="col-md-3 control-" for="radios">Options</div>
   <div id="deliver" ng-model="deliver" class="col-md-6"> 
     <div class="radio-inline" for="radios-0">
-      <input type="radio" name="radios" id="radios-0" value="1" checked="checked">
+      <input type="radio" name="radios" id="radios-0" value="sheena" checked="checked">
       In-person Delivery
     </div> 
     <div class="radio-inline" for="radios-1">
-      <input type="radio" name="radios" id="radios-1" value="2">
+      <input type="radio" name="radios" id="radios-1" value="customer">
       Self-Pickup
     </div> 
   </div>
@@ -255,7 +255,7 @@
 <div class="form-group">
   <div class="col-md-3 control-" for="button1id"></div>
   <div class="col-md-8">
-    <a id="button1id" name="button1id" class="btn btn-success">Submit</a>
+    <button type="submit" class="btn btn-success">Submit</button>
     <button id="button2id" name="button2id" class="btn btn-default"><a href="#/main">Cancel</a></button>
   </div>
 </div>

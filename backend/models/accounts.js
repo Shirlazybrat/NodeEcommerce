@@ -15,7 +15,13 @@ var Account = new Schema ({
 	zip: Number,
 	phone: Number,
 	details: String,
-	orders: {type: Array}
+	orders: {
+		Item: String,
+		Amount: Number,
+		Total: Number
+		}
 	});
 
 module.exports = mongoose.model('Account', Account);
+
+ // Use node mailer to outomate the orders to her email- https://nodemailer.com/

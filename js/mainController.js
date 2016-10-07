@@ -234,6 +234,28 @@ $scope.getNumItems = function() {
 $scope.numItems = $scope.getNumItems();
 console.log($scope.numItems)
 
+$scope.checkout = function(){
+	 	console.log($scope.username);
+	 	$http.post(apiPath + '/options', {
+	 		name: $scope.name,
+	 		home: $scope.home,
+	 		deliver: $scope.deliver,
+	 		address: $scope.address,
+	 		city: $scope.city,
+	 		zip: $scope.zip,
+	 		phone: $scope.phone,
+	 		details: $scope.details
+	 	}).then(function successCallback(response){
+	 		console.log(response);
+	 		if(response.data.message == 'added'){
+	 			$location.path('/cart');
+	 		}
+	 	}, function errorCallback(response){
+	 		console.log(response);
+	 	});
+	 };
+
+
     $scope.payOrder = function(userOptions) {
         $scope.errorMessage = "";
         var handler = StripeCheckout.configure({
