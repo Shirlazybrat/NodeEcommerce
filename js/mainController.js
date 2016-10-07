@@ -172,10 +172,31 @@ $scope.carts = $scope.getCart();
 	
 	// remove item
     $scope.remove = function(index) {
+    	console.log(index);
+    	var removeSelection = $scope.carts[index];
     	$scope.carts.splice(index, 1);
-    	$cookies.remove('cartItems');
-    	$cookies.remove('cartQuantity');
-    	$cookies.remove('cartAmount');
+    	var newCart = $cookies.get('cartItems').split(',');
+		var newQuantity = $cookies.get('cartQuantity').split(',');
+		var newAmount = $cookies.get('cartAmount').split(',');
+		newCart.splice(index,1);
+		newQuantity.splice(index,1);
+		newAmount.splice(index, 1);
+		if (newCart.length == 1){
+			newCart = newCart[0];
+			newQuantity = newQuantity[0];
+			newAmount = newAmount[0];
+		}
+		else{
+		newCart = newCart.join(',');
+		newQuantity = newQuantity.join(',');
+		newAmount = newAmount.join(',');
+		}
+		console.log(newCart);
+		$cookies.put('cartItems', newCart);
+		$cookies.put('cartQuantity', newQuantity);
+		$cookies.put('cartAmount', newAmount);
+		$scope.total = $scope.getTotalPrice();
+		$scope.numItems = $scope.getNumItems();
     };
 
     //API Key
