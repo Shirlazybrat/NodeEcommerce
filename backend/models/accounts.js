@@ -16,9 +16,10 @@ var Account = new Schema ({
 	phone: Number,
 	details: String,
 	orders: {
-		Item: String,
-		Amount: Number,
-		Total: Number
+		item: String,
+		amount: Number,
+		total: Number,
+		date: Number
 		}
 	});
 

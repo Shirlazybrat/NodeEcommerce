@@ -58,7 +58,7 @@ router.post('/register', function(req,res,next){
 
 router.post('/login', function(req,res,next){
 	Account.findOne(
-		{username: req.body.username}, //This is the droid w a`re looking for
+		{username: req.body.username}, //This is the droid we're looking for
 		function(error, document){
 			//document is returned from the mongo query
 			//document will have a property for each field.
@@ -108,15 +108,32 @@ router.get('/getUserData', function(req,res,next){
 				else{
 					res.json({
 						username: document.username,
-						grind: document.grind,
-						frequency: document.frequency,
-						token: document.token
+						email: document.email,
+						token: document.token,
+						name: document.name,
+						home: document.home,
+						deliver: document.deliver,
+						address: document.address,
+						city: document.city,
+						zip: document.zip,
+						phone: document.phone,
+						details: document.details,
+						orders: document.orders
 					});
 				}
 			}
 		)
 	}
 });
+
+	// orders: {
+	// 	item: String,
+	// 	amount: Number,
+	// 	total: Number,
+	// 	date: Number
+	// 	}
+
+
 
 router.post('/stripe', function(req,res,next){
 	

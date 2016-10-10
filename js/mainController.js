@@ -20,7 +20,7 @@ ecommerceApp.controller('mainController', function($scope, $http, $location, $co
 	 		console.log(response);
 	 	});
 	 };
-
+$scope.username = $scope.register();
 
 $scope.login = function(){
 	 	console.log($scope.username);
@@ -37,6 +37,9 @@ $scope.login = function(){
 	 		console.log(response);
 	 	});
 	 };
+
+$scope.username = $scope.login();
+
 
 $scope.pickles = function(){
 	 	console.log($scope.username);
@@ -235,7 +238,7 @@ $scope.numItems = $scope.getNumItems();
 console.log($scope.numItems)
 
 $scope.checkout = function(){
-	 	console.log($scope.username);
+	 	console.log($scope.name);
 	 	$http.post(apiPath + '/options', {
 	 		name: $scope.name,
 	 		home: $scope.home,
@@ -247,13 +250,14 @@ $scope.checkout = function(){
 	 		details: $scope.details
 	 	}).then(function successCallback(response){
 	 		console.log(response);
-	 		if(response.data.message == 'added'){
+	 		if(response.data.message == 'info submitted'){
 	 			$location.path('/cart');
 	 		}
 	 	}, function errorCallback(response){
 	 		console.log(response);
 	 	});
 	 };
+$scope.name = $scope.checkout();
 
 
     $scope.payOrder = function(userOptions) {
