@@ -87,6 +87,8 @@ router.post('/login', function(req,res,next){
 		}
 	)
 });
+
+
 //logout function
 // --$cookies.put('token', '');
 // -- $cookies.remove('token');
@@ -98,6 +100,27 @@ router.get('/getUserData', function(req,res,next){
 		res.json({failure: "noToken"});
 	}
 	else {
+		Account.findOne(
+			{token: userToken}, //this is the droid we're looking for
+			function(error, document){
+				if(document == null){
+					//this token is not in the system
+					res.json({failure: 'badToken'}); //
+				}
+				else{
+					res.json({
+						username: document.username,
+						email: document.email,
+					});
+				}
+			}
+		)
+	}
+});
+
+router.post('/checkoutData', function(req,res,next){
+	var userToken = req.query.token; // the XXX in ?token=[XXX]
+		console.log(req.body)
 		Account.findOne(
 			{token: userToken}, //this is the droid we're looking for
 			function(error, document){
@@ -132,8 +155,6 @@ router.get('/getUserData', function(req,res,next){
 	// 	total: Number,
 	// 	date: Number
 	// 	}
-
-
 
 router.post('/stripe', function(req,res,next){
 	

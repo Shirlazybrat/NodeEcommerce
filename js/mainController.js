@@ -239,7 +239,7 @@ console.log($scope.numItems)
 
 $scope.checkout = function(){
 	 	console.log($scope.name);
-	 	$http.post(apiPath + '/options', {
+	 	$http.post(apiPath + '/checkoutData', {
 	 		name: $scope.name,
 	 		home: $scope.home,
 	 		deliver: $scope.deliver,
@@ -250,7 +250,7 @@ $scope.checkout = function(){
 	 		details: $scope.details
 	 	}).then(function successCallback(response){
 	 		console.log(response);
-	 		if(response.data.message == 'info submitted'){
+	 		if(response.data.message == 'added'){
 	 			$location.path('/cart');
 	 		}
 	 	}, function errorCallback(response){
