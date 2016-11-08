@@ -118,7 +118,7 @@ router.get('/getUserData', function(req,res,next){
 	}
 });
 
-router.post('/checkoutData', function(req,res,next){
+router.post('/portalData', function(req,res,next){
 	var userToken = req.query.token; // the XXX in ?token=[XXX]
 		console.log(req.body)
 		Account.findOne(
