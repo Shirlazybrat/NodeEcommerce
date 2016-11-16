@@ -16,7 +16,7 @@ Visit here: [Sheena's Pickles](http://shirletterly.com/sheenas-pickles/#/)
 	- Html
 	- CSS
 	- Bootstrap
-	-SASS
+	- SASS
 	- AngularJS
 	- Express 
 	- NodeJS
@@ -78,7 +78,7 @@ $scope.addToCart = function(idOfitem, quantity, amount){
 ```
 
 
-####Early stages of site
+#### Site Features
 ![Alt text](img/screen1.png "Item descriptions")
 
 ![Alt text](img/screen2.png "Item Cart")
