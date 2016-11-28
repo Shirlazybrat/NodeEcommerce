@@ -15,7 +15,7 @@ span {
   font-size: 1.5em;
 }
 
-/*font-family: 'Unkempt', cursive;  (extra front style)*/
+/*font-family: 'Unkempt', cursive; (extra front style)*/
 /* line 30, ../compass/sass/styles.scss */
 nav li {
   color: #65922B;
@@ -24,9 +24,10 @@ nav li {
 nav .navbar-brand {
   font-family: 'Henny Penny', cursive;
   font-color: #65922B;
+  margin: 0px 10px;
 }
 
-/* line 40, ../compass/sass/styles.scss */
+/* line 41, ../compass/sass/styles.scss */
 .jumbotron {
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.1), black), url("../img/cartoon.jpg");
   margin-bottom: 20px;
@@ -39,102 +40,102 @@ nav .navbar-brand {
   text-shadow: #385D3E 0.3em 0.3em 0.3em;
 }
 
-/* line 52, ../compass/sass/styles.scss */
+/* line 53, ../compass/sass/styles.scss */
 .jumbotron p {
   margin-bottom: 30px;
   font-size: 50px;
   font-weight: 200;
 }
 
-/* line 58, ../compass/sass/styles.scss */
+/* line 59, ../compass/sass/styles.scss */
 .site-wrapper {
   text-align: center;
   font-family: 'Henny Penny', cursive;
 }
 
-/* line 63, ../compass/sass/styles.scss */
+/* line 64, ../compass/sass/styles.scss */
 section .row {
   margin: 0px 0px 15px 0px;
 }
 
-/* line 67, ../compass/sass/styles.scss */
+/* line 68, ../compass/sass/styles.scss */
 section#delights {
   padding-top: 0px;
   padding-bottom: 0px;
   text-align: center;
 }
 
-/* line 77, ../compass/sass/styles.scss */
+/* line 78, ../compass/sass/styles.scss */
 .events-section, #testimony {
   padding: 50px;
 }
 
-/* line 81, ../compass/sass/styles.scss */
+/* line 82, ../compass/sass/styles.scss */
 a {
   color: #65922B;
 }
 
-/* line 85, ../compass/sass/styles.scss */
+/* line 86, ../compass/sass/styles.scss */
 a:hover {
   color: #d27b82;
   text-decoration: none;
 }
 
-/* line 90, ../compass/sass/styles.scss */
+/* line 91, ../compass/sass/styles.scss */
 h1, h2, h3 {
   font-family: 'Henny Penny', cursive;
   color: #65922B;
 }
 
-/* line 96, ../compass/sass/styles.scss */
+/* line 97, ../compass/sass/styles.scss */
 .lead h1 {
   font-size: 125px;
   margin-top: 60px;
   margin-bottom: 5px;
 }
 
-/* line 102, ../compass/sass/styles.scss */
+/* line 103, ../compass/sass/styles.scss */
 .lead {
   text-align: center;
 }
 
-/* line 106, ../compass/sass/styles.scss */
+/* line 107, ../compass/sass/styles.scss */
 .slidePics {
   max-height: 700px;
   margin: 10px 25px 10px 25px;
   text-align: -webkit-center;
 }
 
-/* line 112, ../compass/sass/styles.scss */
+/* line 113, ../compass/sass/styles.scss */
 p {
   font-family: 'Shadows Into Light Two', cursive;
 }
 
-/* line 116, ../compass/sass/styles.scss */
+/* line 117, ../compass/sass/styles.scss */
 img.sample {
   margin: 12px;
   width: 90%;
   /*border: #65922B solid 2px;*/
 }
 
-/* line 123, ../compass/sass/styles.scss */
+/* line 124, ../compass/sass/styles.scss */
 .profile img.profileImg {
   height: 425px;
 }
 
-/* line 128, ../compass/sass/styles.scss */
+/* line 129, ../compass/sass/styles.scss */
 .pickle-grid {
   padding: 0px;
   margin: 0px;
 }
-/* line 131, ../compass/sass/styles.scss */
+/* line 132, ../compass/sass/styles.scss */
 .pickle-grid img {
   width: 100%;
   margin: 0px;
   padding: 0px;
 }
 
-/* line 143, ../compass/sass/styles.scss */
+/* line 144, ../compass/sass/styles.scss */
 .section-divider {
   z-index: 999;
   width: 100%;
@@ -151,7 +152,7 @@ img.sample {
   background-attachment: relative;
   text-align: center;
 }
-/* line 168, ../compass/sass/styles.scss */
+/* line 169, ../compass/sass/styles.scss */
 .section-divider .container {
   padding-right: 15px;
   padding-left: 15px;
@@ -159,19 +160,19 @@ img.sample {
   margin-left: auto;
 }
 
-/* line 176, ../compass/sass/styles.scss */
+/* line 177, ../compass/sass/styles.scss */
 .divider1 {
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.1), black), url(../img/PickleBag.jpg);
   margin-top: 0px;
 }
 
-/* line 181, ../compass/sass/styles.scss */
+/* line 182, ../compass/sass/styles.scss */
 .divider2 {
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.1), black), url(../img/mail.jpg);
   margin-top: 0px;
 }
 
-/* line 186, ../compass/sass/styles.scss */
+/* line 187, ../compass/sass/styles.scss */
 .split {
   background: #f5f5f5;
   margin-top: 0px;
@@ -179,21 +180,21 @@ img.sample {
   border-bottom: 1px solid #ddd;
   text-align: center;
 }
-/* line 193, ../compass/sass/styles.scss */
+/* line 194, ../compass/sass/styles.scss */
 .split .row {
   margin-right: 0px;
   margin-left: -15px;
 }
-/* line 197, ../compass/sass/styles.scss */
+/* line 198, ../compass/sass/styles.scss */
 .split .row img {
   width: 100%;
 }
-/* line 201, ../compass/sass/styles.scss */
+/* line 202, ../compass/sass/styles.scss */
 .split .row .centered {
   text-align: center;
 }
 
-/* line 207, ../compass/sass/styles.scss */
+/* line 208, ../compass/sass/styles.scss */
 .thumbnail {
   padding: 5px;
   width: 280px;
@@ -202,7 +203,7 @@ img.sample {
   overflow: hidden;
 }
 
-/* line 215, ../compass/sass/styles.scss */
+/* line 216, ../compass/sass/styles.scss */
 .caption {
   position: absolute;
   top: 0;
@@ -215,7 +216,7 @@ img.sample {
   text-align: center;
 }
 
-/* line 229, ../compass/sass/styles.scss */
+/* line 230, ../compass/sass/styles.scss */
 #map-canvas {
   width: 100%;
   height: 300px;
@@ -223,23 +224,23 @@ img.sample {
   padding: 15px;
 }
 
-/* line 236, ../compass/sass/styles.scss */
+/* line 237, ../compass/sass/styles.scss */
 .map-form.row {
   margin: 15px 0;
 }
 
-/* line 240, ../compass/sass/styles.scss */
+/* line 241, ../compass/sass/styles.scss */
 footer {
   margin-top: 50px;
   margin-bottom: 50px;
 }
 
-/* line 250, ../compass/sass/styles.scss */
+/* line 251, ../compass/sass/styles.scss */
 h3.price, h2.price {
   margin: 5px;
 }
 
-/* line 256, ../compass/sass/styles.scss */
+/* line 257, ../compass/sass/styles.scss */
 .login, .register {
   background-color: white;
   width: 500px;
@@ -250,19 +251,19 @@ h3.price, h2.price {
   padding-top: 10px;
 }
 
-/* line 265, ../compass/sass/styles.scss */
+/* line 266, ../compass/sass/styles.scss */
 .loginheading {
   text-align: center;
   margin-bottom: 30px;
 }
 
-/* line 269, ../compass/sass/styles.scss */
+/* line 270, ../compass/sass/styles.scss */
 .loginbottomtext {
   text-align: center;
   margin-top: 20px;
 }
 
-/* line 273, ../compass/sass/styles.scss */
+/* line 274, ../compass/sass/styles.scss */
 .pagecontainer {
   margin-top: 30px;
   background-color: white;
@@ -271,7 +272,7 @@ h3.price, h2.price {
   margin-right: 20px;
 }
 
-/* line 281, ../compass/sass/styles.scss */
+/* line 282, ../compass/sass/styles.scss */
 .pageheader {
   width: 100%;
   height: 60px;
@@ -280,7 +281,7 @@ h3.price, h2.price {
   padding: 0;
 }
 
-/* line 288, ../compass/sass/styles.scss */
+/* line 289, ../compass/sass/styles.scss */
 .menubutton {
   color: white;
   background-color: #ff6800;
@@ -289,36 +290,36 @@ h3.price, h2.price {
   margin-top: 10px;
 }
 
-/* line 295, ../compass/sass/styles.scss */
+/* line 296, ../compass/sass/styles.scss */
 .pagetitle {
   color: white;
   margin: 10px;
 }
 
-/* line 299, ../compass/sass/styles.scss */
+/* line 300, ../compass/sass/styles.scss */
 .contentheight {
   height: 300px;
 }
 
-/* line 308, ../compass/sass/styles.scss */
+/* line 309, ../compass/sass/styles.scss */
 .affix {
   right: 0px;
 }
 
-/* line 312, ../compass/sass/styles.scss */
+/* line 313, ../compass/sass/styles.scss */
 .affix-top {
   right: 0px;
   position: fixed;
 }
 
-/* line 317, ../compass/sass/styles.scss */
+/* line 318, ../compass/sass/styles.scss */
 .scroll-debug {
   position: fixed;
   bottom: 10px;
   right: 10px;
 }
 
-/* line 326, ../compass/sass/styles.scss */
+/* line 327, ../compass/sass/styles.scss */
 .thumbnailOption img {
   padding: 5px;
   width: 250px;
@@ -329,46 +330,46 @@ h3.price, h2.price {
 
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 767px) and (max-width: 979px) {
-  /* line 341, ../compass/sass/styles.scss */
+  /* line 342, ../compass/sass/styles.scss */
   section {
     width: 100%;
   }
-  /* line 343, ../compass/sass/styles.scss */
+  /* line 344, ../compass/sass/styles.scss */
   section img.profileImg {
     max-height: 425px;
   }
 }
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
-  /* line 351, ../compass/sass/styles.scss */
+  /* line 352, ../compass/sass/styles.scss */
   section {
     width: 100%;
   }
 
-  /* line 354, ../compass/sass/styles.scss */
+  /* line 355, ../compass/sass/styles.scss */
   .navbar {
     padding: 0px;
   }
 
-  /* line 357, ../compass/sass/styles.scss */
+  /* line 358, ../compass/sass/styles.scss */
   .lead h1 {
     font-size: 100px;
   }
 }
 /* Landscape phones and down */
 @media (max-width: 480px) {
-  /* line 364, ../compass/sass/styles.scss */
+  /* line 365, ../compass/sass/styles.scss */
   section {
     width: 100%;
     float: none;
   }
 
-  /* line 368, ../compass/sass/styles.scss */
+  /* line 369, ../compass/sass/styles.scss */
   .lead h1 {
     font-size: 70px;
   }
 
-  /* line 372, ../compass/sass/styles.scss */
+  /* line 373, ../compass/sass/styles.scss */
   .profile img.profileImg {
     height: 225px;
   }
