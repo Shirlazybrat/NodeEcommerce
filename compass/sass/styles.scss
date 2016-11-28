@@ -36,6 +36,7 @@ nav {
 	}
 }
 
+
 .jumbotron {
 	background-image: linear-gradient(to top, rgba(0,0,0, 0.1), rgba(0,0,0, 25)),url("../img/cartoon.jpg");
     margin-bottom: 20px;
@@ -48,7 +49,7 @@ nav {
     text-shadow: #385D3E 0.3em 0.3em 0.3em;
 }
 
-	.jumbotron p {
+	.jumbotron p {	
     margin-bottom: 30px;
     font-size: 50px;
     font-weight: 200;
@@ -73,6 +74,9 @@ section#delights {
     // }
 }
 
+.events-section, #testimony{
+	padding: 50px;
+}
 
 a {
 	color: #65922B;
@@ -116,9 +120,8 @@ img.sample {
  }
 
 .profile {
-
 	 img.profileImg {
-	 	max-height: 425px;
+	 	height: 425px;
 	 }
 }
 
@@ -126,7 +129,7 @@ img.sample {
 	padding: 0px;
 	margin: 0px;
 	img {
-		width: 650px;
+		width: 100%;
 		margin: 0px;
 		padding: 0px;
 	}
@@ -192,7 +195,7 @@ img.sample {
 	    margin-left: -15px;
 
 	    img {
-	    width: 500px;
+	    width: 100%;
 	    }
 
 	    .centered{
@@ -333,9 +336,8 @@ h3.price,  h2.price{
 
 /////////////////////////////////////////////////
 
-
 /* Portrait tablet to landscape and desktop */
-@media (min-width: 768px) and (max-width: 979px) {
+@media (min-width: 767px) and (max-width: 979px) {
 	section {
   		width:100%;
   		img.profileImg {
@@ -345,9 +347,15 @@ h3.price,  h2.price{
 }
  
 /* Landscape phone to portrait tablet */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
 	section {
   		width:100%;
+	}
+	.navbar {
+    padding: 0px;
+    }
+.lead h1 {
+    font-size: 100px;
 	}
 }
  
@@ -356,5 +364,12 @@ h3.price,  h2.price{
 	section {
   		width:100%;
       	float:none;
+	}
+	.lead h1 {
+    font-size: 70px;
+	}
+
+	.profile img.profileImg {
+    height: 225px;
 	}
 }
