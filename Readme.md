@@ -8,7 +8,7 @@
 ![Alt text](img/screenHome.png "Home Page")
 
 
-###This is an application created for the marketing and sale of products produced by Sheena Moore. 
+### This is an application created for the marketing and sale of products produced by Sheena Moore.
 
 Visit here: [Sheena's Pickles](http://shirletterly.com/sheenas-pickles/#/)
 
