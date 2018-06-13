@@ -1,8 +1,8 @@
-#Ecommerce site in node.js, express, mongodb and angular. Full stack MEAN
+# Ecommerce site in node.js, express, mongodb and angular. Full stack MEAN
 
-##front-end is entirely angular.js, HTML, and CSS
+## front-end is entirely angular.js, HTML, and CSS
 
-##back-end is an api driven by Express.js and mongodb in node.js
+## back-end is an api driven by Express.js and mongodb in node.js
 
 
 ![Alt text](img/screenHome.png "Home Page")
@@ -12,7 +12,7 @@
 
 Visit here: [Sheena's Pickles](http://shirletterly.com/sheenas-pickles/#/)
 
-##Built with:
+## Built with:
 	- Html
 	- CSS
 	- Bootstrap
@@ -22,8 +22,8 @@ Visit here: [Sheena's Pickles](http://shirletterly.com/sheenas-pickles/#/)
 	- NodeJS
 	- MongoDB
 
-##Sample Code
-###The following code was created inside the mainController to take the users selected items and store the in the cookies as a cart that can then be accessed for amount and price calculation for checkout.
+## Sample Code
+### The following code was created inside the mainController to take the users selected items and store the in the cookies as a cart that can then be accessed for amount and price calculation for checkout.
 
 ```javascript
 $scope.addToCart = function(idOfitem, quantity, amount){
@@ -89,11 +89,11 @@ $scope.addToCart = function(idOfitem, quantity, amount){
 
 <!-- add a video of interaction with the site -->
 
-##Future Add-ons
+## Future Add-ons
 - Admin portal for access to customer purchases.
 - Ability for visitors to send messages directly from the site to owner.
 - An enhanced UX/UI design that encourages more visitors.
 
 
-###Please visit my personal profile to see more current projects.
+### Please visit my personal profile to see more current projects.
 - [Shirlette Chambers](https://github.com/Shirlazybrat)
